@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i:*)",
+      "Bash(python3 -c:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(GIT_EDITOR=\"/tmp/git-msg-editor.sh\" git rebase --continue)",
+      "Bash(git push:*)"
+    ]
+  }
+}
