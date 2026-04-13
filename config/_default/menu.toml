@@ -13,6 +13,7 @@
     url        = "https://github.com/verymoe"
     [social.params]
         icon = "brand-github"
+        newtab = true
 
 [[social]]
     identifier = "twitter"
@@ -20,6 +21,7 @@
     url        = "https://x.com/verymoes"
     [social.params]
         icon = "brand-twitter"
+        newtab = true
 
 [[social]]
     identifier = "telegram"
@@ -27,10 +29,12 @@
     url        = "https://t.me/verymoes"
     [social.params]
         icon = "brand-telegram"
+        newtab = true
 
 [[social]]
     identifier = "matrix"
     name       = "Matrix"
     url        = "https://matrix.to/#/@lolicon:mozilla.org"
     [social.params]
-    icon = "brand-matrix"
+        icon = "brand-matrix"
+        newtab = true
