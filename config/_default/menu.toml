@@ -10,15 +10,27 @@
 [[social]]
     identifier = "github"
     name       = "GitHub"
-    url        = "https://github.com/CaiJimmy/hugo-theme-stack"
-
+    url        = "https://github.com/verymoe"
     [social.params]
         icon = "brand-github"
 
 [[social]]
     identifier = "twitter"
     name       = "Twitter"
-    url        = "https://twitter.com"
-
+    url        = "https://x.com/verymoes"
     [social.params]
         icon = "brand-twitter"
+
+[[social]]
+    identifier = "telegram"
+    name       = "Telegram"
+    url        = "https://t.me/verymoes"
+    [social.params]
+        icon = "brand-telegram"
+
+[[social]]
+    identifier = "matrix"
+    name       = "Matrix"
+    url        = "https://matrix.to/#/@lolicon:mozilla.org"
+    [social.params]
+    icon = "brand-matrix"
