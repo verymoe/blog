@@ -1,10 +1,5 @@
 {
-  "framework": "hugo",
-  "buildCommand": "curl -sLJO https://github.com/sass/dart-sass/releases/download/1.97.1/dart-sass-1.97.1-linux-x64.tar.gz && tar -xf dart-sass-1.97.1-linux-x64.tar.gz && rm dart-sass-1.97.1-linux-x64.tar.gz && PATH=$PWD/dart-sass:$PATH hugo --gc --minify",
+  "buildCommand": "bash build.sh",
   "outputDirectory": "public",
-  "env": {
-    "HUGO_VERSION": "0.154.2",
-    "HUGO_ENVIRONMENT": "production",
-    "GO_VERSION": "1.22"
-  }
+  "installCommand": "echo 'skip'"
 }
