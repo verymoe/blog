@@ -1,33 +1,168 @@
 ---
-title: Links
+title: "Links"
 links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: 依如初梦
+    description: 一只废材小前端~
+    website: https://blog.lyi.moe
+    image: https://i.lyi.moe/avatar
+  - title: FGHRSH
+    description: FGHRSH 的博客
+    website: https://www.fghrsh.net/
+    image: https://assets.moedev.cn/blog/photo/images/2025/9dd067b26526f97064c68b5ce89d60d1!webp
+  - title: 老鱼干
+    description: 专注于IT互联网
+    website: https://www.tinyfish.top/
+    image: https://weavatar.com//avatar/1292b9f928d868fefeb58d42790a55ee?s=80&d=404
+  - title: Kano酱の博客
+    description: 只要你喜欢kano，我们就是好朋友！
+    website: https://kanochan.net/
+    image: https://assets.moedev.cn/blog/photo/images/2025/2a11c733e28efd4735e5b0604cc26a30!webp
+  - title: 北忆Blog
+    description: 打破一切.
+    website: https://sirbei.com/
+    image: https://assets.moedev.cn/blog/photo/images/2025/433fcb71fcecefc50e671055cc4495fc!webp
+  - title: 赤茶
+    description: Trying to light up the dark.
+    website: https://cynosura.one/
+    image: https://assets.moedev.cn/blog/photo/images/2025/ERmA.jpg!webp
+  - title: Hoyue の 自留地
+    description: 这里的一切都有始有终，却能容纳所有的不期而遇和久别重逢。
+    website: https://hoyue.fun/
+    image: https://assets.moedev.cn/blog/photo/images/2025/f9b0c607f8ad2eaa676423071aa24ae2!webp
+  - title: Loac
+    description: '我不是罗大锤'
+    website: https://loac.cc
+    image: https://ldc-1251523367.cos.ap-beijing.myqcloud.com/nola/logo.png
+  - title: 茶栗栗
+    description: 是可爱的栗栗！
+    website: https://chariri.moe/
+    image: https://assets.moedev.cn/blog/photo/images/2025/6c1c0e77da2030751f73dd303e6a4144!webp
+  - title: 洛雨の小站
+    description: 历史终将证明一切
+    website: https://luotianyi.eu
+    image: https://luotianyi.eu/wp-content/uploads/2024/05/1715104252-v2-be101b87e6774cf029ce05ecff8f2b33_r-scaled-e1715104292489.jpg
+  - title: Heartalborada's Blog
+    description: 我的征途是星辰大海
+    website: https://loliurl.club
+    image: https://icon.loliurl.club/icon-png
+  - title: 立言 Li Yan
+    description: 求真務實，重義輕利。
+    website: https://liyan.moe
+    image: https://liyan.moe/favicon.webp
+  - title: LiKai Blog
+    description: DE BG6HFD,73!
+    website: https://tylk.cc
+    image: https://tylk.cc/wp-content/uploads/2021/06/tptylv2f.png
+  - title: 風凪的小窝
+    description: DE BH2VSQ喵~
+    website: https://blog.bh2vsq.cn
+    image: https://blog.bh2vsq.cn/photo/avatar/avatar.jpg
+  - title: Mikuの极光星
+    description: 心有多宽，世界就有多远
+    website: https://blog.sotkg.com
+    image: https://cn.cravatar.com/avatar/1012bf78fb01d5b964c3a9a0f515911a.png
+  - title: SailTrack杂谈站
+    description: 让我们忠于理想，让我们面对现实
+    website: https://www.sailtrack.cn
+    image: https://www.sailtrack.cn/upload/logo-wigth.png
+  - title: 果果小站
+    description: 人生如梦，一尊还酹江月。
+    website: https://呐.cn/
+    image: https://assets.moedev.cn/blog/photo/images/2025/tSeu.png!webp
+  - title: YuanRetro
+    description: 这是一个成分复杂的小站哦～
+    website: https://www.yuanshen.dev
+    image: https://www.yuanshen.dev/img/nahida.png
+  - title: 茈羽酱的小屋
+    description: 一个萌新站长的折腾日记
+    website: https://moedk.com
+    image: https://moedk.com/images/icon.png
+  - title: 萌新杰少
+    description: 遵从中二的召唤，来吧少年！
+    website: https://imcys.com/
+    image: https://assets.moedev.cn/blog/photo/images/2025/26ef9af333b8f53f918e666b1777f1b7!webp
+  - title: 派兹的小站
+    description: 驶向未来之船
+    website: https://blog.blw.moe/
+    image: https://assets.moedev.cn/blog/photo/images/2025/tVCb.png!webp
+  - title: 耗子博客
+    description: 路漫漫其修远兮，吾将上下而求索。
+    website: https://hzbk.net/
+    image: https://assets.moedev.cn/blog/photo/images/2025/4c2a1e88031a2ea87817acfa2a11e058!webp
+  - title: qxdn
+    description: 蓬生麻中，不扶自直
+    website: https://qianxu.run/
+    image: https://assets.moedev.cn/blog/photo/images/2025/6aua.jpg!webp
+  - title: Mblog
+    description: 但愿岁月如客，来去皆从容。
+    website: https://imufeng.cn/
+    image: https://assets.moedev.cn/blog/photo/images/2025/E6v1.png!webp
+  - title: Kiritake Kumi
+    description: 私はあの日、誓ったの。いつか絶対、あのステージに立つんだって！
+    website: https://niconiconi.us/
+    image: https://assets.moedev.cn/blog/photo/images/2025/FrIO.md.png!webp
+  - title: 晓白的小站
+    description: 生命不息，折腾不止。
+    website: https://blog.chs.pub/
+    image: https://assets.moedev.cn/blog/photo/images/2025/5b55119bb2a14.jpg!webp
+  - title: Shellblock
+    description: 永远相信美好的事情即将发生
+    website: https://blog.saky.site/
+    image: https://assets.moedev.cn/blog/photo/images/2025/f162dc1ca42db7be68626d20bfa3328d!webp
+  - title: Recopec 的博客
+    description: 一只喵喵
+    website: https://blog.irec.moe/
+    image: https://assets.moedev.cn/blog/photo/images/2025/E5K9.jpg!webp
+  - title: Luminous' Home
+    description: 记录生活中的点滴
+    website: https://luotianyi.vc/
+    image: https://assets.moedev.cn/blog/photo/images/2025/my.jpg!webp
+  - title: Razuritta`s Notebook
+    description: April showers bring May flowers
+    website: https://blog.razuritta.me/
+    image: https://assets.moedev.cn/blog/photo/images/2025/nCIt.jpg!webp
+  - title: Fankes
+    description: 方方
+    website: https://blog.fankes.com/
+    image: https://assets.moedev.cn/blog/photo/images/2025/e5f256422d6470acba526edf42906fef!webp
+  - title: Sunny Pai
+    description: In the dawn, towards the sunrise.
+    website: https://www.sunnypai.top
+    image: https://assets.moedev.cn/blog/photo/images/2025/%25E7%25BE%258E%25E6%25B3%25A2%25E9%2587%258C.webp
+
 menu:
     main: 
-        weight: 4
+        weight: 3
         params:
             icon: link
 
 comments: false
+license: false
 ---
 
-To use this feature, add `links` section to frontmatter.
-
-This page's frontmatter:
-
-```yaml
-links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
 ```
-
-`image` field accepts both local and external images.
+  - title: 无何有之乡
+    description: 想要梦想与咸鱼兼得呢
+    website: https://opau.cn/
+    image: https://assets.moedev.cn/blog/photo/images/2025/UooH.jpg!webp
+  - title: Thelia的随想
+    description: 一个记录自己随想的地方
+    website: https://thelia.site
+    image: https://thelia.site/wp-content/uploads/2025/08/cropped-oc头像.jpg
+  - title: 纯情
+    description: 专注于网络安全、docker脚本源码、学习强国积分、培训脚本、搭建techxuexi等
+    website: https://blog.xiaohack.org/
+    image: https://assets.moedev.cn/blog/photo/images/2025/9e17d1748a263f9ee5f3122a34dd00f8!webp
+  - title: Lu's Blog
+    description: 一个简简单单的博客，记录学习和生活。
+    website: https://llxx.cc/
+    image: https://assets.moedev.cn/blog/photo/images/2025/c4abeeac4628d97bdd8e1133c6887d4c!webp
+  - title: Injahow
+    description: 没什么有趣的东西，有趣的是来这的你！
+    website: https://injahow.com/
+    image: https://assets.moedev.cn/blog/photo/images/2025/bf84d1fb6b26e206cbf74a40adf17880!webp
+  - title: Zhuym
+    description: Zhuym的博客
+    website: https://blog.zer0code.cn/
+    image: https://assets.moedev.cn/blog/photo/images/2025/nl5K.png!webp
+```
