@@ -11,6 +11,7 @@
     identifier = "github"
     name       = "GitHub"
     url        = "https://github.com/verymoe"
+    weight     = 1
     [social.params]
         icon = "brand-github"
         newtab = true
@@ -19,6 +20,7 @@
     identifier = "twitter"
     name       = "Twitter"
     url        = "https://x.com/verymoes"
+    weight     = 2
     [social.params]
         icon = "brand-twitter"
         newtab = true
@@ -27,14 +29,25 @@
     identifier = "telegram"
     name       = "Telegram"
     url        = "https://t.me/verymoes"
+    weight     = 3
     [social.params]
         icon = "brand-telegram"
+        newtab = true
+
+[[social]]
+    identifier = "email"
+    name       = "Email"
+    url        = "mailto:shiro@332.email"
+    weight     = 4
+    [social.params]
+        icon = "mail"
         newtab = true
 
 [[social]]
     identifier = "matrix"
     name       = "Matrix"
     url        = "https://matrix.to/#/@lolicon:mozilla.org"
+    weight     = 5
     [social.params]
         icon = "brand-matrix"
         newtab = true
