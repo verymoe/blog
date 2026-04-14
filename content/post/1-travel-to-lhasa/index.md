@@ -3,6 +3,7 @@ title: 拉萨之行
 description: 海拔3600米的旅行—日光城拉萨
 date: 2024-11-05 08:31:00+0000
 image: https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_111810.webp
+slug: travel-to-lhasa
 categories: note
 ---
 

@@ -3,6 +3,7 @@ title: 低功耗家里云升级记
 description: Intel D-1581 寨板使用体验与性能测试
 date: 2025-01-22 17:37:00+0000
 image: https://assets.moedev.cn/blog/photo/images/2025/20250122114505511.png!webp
+slug: intel-d1581-home-server-upgrade
 categories: tech
 ---
 
