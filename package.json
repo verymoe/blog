@@ -1,12 +1,13 @@
 {
   "name": "blog",
   "version": "1.0.0",
-  "description": "Hugo blog with Vercel Speed Insights",
+  "description": "Hugo blog with Vercel Speed Insights and Web Analytics",
   "private": true,
   "scripts": {
     "build": "bash build.sh"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^1.1.0"
   }
 }
