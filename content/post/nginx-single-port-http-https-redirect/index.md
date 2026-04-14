@@ -2,6 +2,7 @@
 title: Nginx单端口HTTP自动跳转HTTPS
 description: 通过 Nginx 的 497 错误响应实现 HTTP 请求自动重定向到 HTTPS。
 date: 2024-12-06 21:04:00+0000
+categories: tech
 ---
 
 ## 场景分析

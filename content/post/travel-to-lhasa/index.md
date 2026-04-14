@@ -3,6 +3,7 @@ title: 拉萨之行
 description: 海拔3600米的旅行—日光城拉萨
 date: 2024-11-05 08:31:00+0000
 image: https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_111810.webp
+categories: note
 ---
 
 作为宅宅平时就没想着出门玩什么的，这学期连地铁都没怎么坐过，来天津后出门去过最远的地方也就和朋友一起组团去爬泰山。不过这次恰好比赛承办校在拉萨，所以就有了这趟公费~~旅游~~。
