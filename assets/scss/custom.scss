@@ -1,3 +1,62 @@
-/*
-    You can add your own custom styles here.
-*/
+/* Links page: responsive grid layout + shuffle anti-FOUC */
+.links-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    visibility: hidden;
+
+    /* Remove container-level card styles */
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+
+    @include respond(md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(xl) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.shuffled {
+        visibility: visible;
+    }
+
+    article {
+        @include card-style;
+        overflow: hidden;
+
+        /* Remove the list-style border separators */
+        border-bottom: none !important;
+
+        & > a {
+            display: flex;
+            align-items: center;
+            padding: var(--small-card-padding);
+            gap: var(--spacing-md);
+        }
+
+        .article-details {
+            flex-grow: 1;
+            padding: 0;
+            min-height: var(--article-compact-image-size);
+            gap: var(--spacing-sm);
+        }
+
+        .article-title {
+            margin: 0;
+            font-size: 1.6rem;
+
+            @include respond(md) {
+                font-size: 1.8rem;
+            }
+        }
+
+        .article-image img {
+            width: var(--article-compact-image-size);
+            height: var(--article-compact-image-size);
+            object-fit: cover;
+        }
+    }
+}
