@@ -60,3 +60,41 @@
         }
     }
 }
+
+/* Lost links section */
+.links-lost-title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    color: var(--card-text-color-tertiary);
+    text-align: center;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 30px;
+        height: 1px;
+        background: var(--card-separator-color);
+        vertical-align: middle;
+        margin: 0 10px;
+    }
+}
+
+.links-lost {
+    visibility: visible;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+
+    .lost-reason {
+        color: var(--accent-color);
+        font-size: 1.2rem;
+    }
+}
