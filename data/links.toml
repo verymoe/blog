@@ -12,12 +12,6 @@ website = "https://www.fghrsh.net/"
 image = "https://assets.moedev.cn/blog/photo/images/2025/9dd067b26526f97064c68b5ce89d60d1!webp"
 
 [[links]]
-title = "老鱼干"
-description = "专注于IT互联网"
-website = "https://www.tinyfish.top/"
-image = "https://weavatar.com//avatar/1292b9f928d868fefeb58d42790a55ee?s=80&d=404"
-
-[[links]]
 title = "Kano酱の博客"
 description = "只要你喜欢kano，我们就是好朋友！"
 website = "https://kanochan.net/"
@@ -96,12 +90,6 @@ website = "https://www.sailtrack.cn"
 image = "https://www.sailtrack.cn/upload/logo-wigth.png"
 
 [[links]]
-title = "果果小站"
-description = "人生如梦，一尊还酹江月。"
-website = "https://呐.cn/"
-image = "https://assets.moedev.cn/blog/photo/images/2025/tSeu.png!webp"
-
-[[links]]
 title = "YuanRetro"
 description = "这是一个成分复杂的小站哦～"
 website = "https://www.yuanshen.dev"
@@ -174,12 +162,6 @@ website = "https://blog.razuritta.me/"
 image = "https://assets.moedev.cn/blog/photo/images/2025/nCIt.jpg!webp"
 
 [[links]]
-title = "Fankes"
-description = "方方"
-website = "https://blog.fankes.com/"
-image = "https://assets.moedev.cn/blog/photo/images/2025/e5f256422d6470acba526edf42906fef!webp"
-
-[[links]]
 title = "Sunny Pai"
 description = "In the dawn, towards the sunrise."
 website = "https://www.sunnypai.top"
@@ -214,13 +196,6 @@ image = "https://assets.moedev.cn/blog/photo/images/2025/9e17d1748a263f9ee5f3122
 reason = "网站无法访问"
 
 [[lost_links]]
-title = "Lu's Blog"
-description = "一个简简单单的博客，记录学习和生活。"
-website = "https://llxx.cc/"
-image = "https://assets.moedev.cn/blog/photo/images/2025/c4abeeac4628d97bdd8e1133c6887d4c!webp"
-reason = "友链未找到"
-
-[[lost_links]]
 title = "Injahow"
 description = "没什么有趣的东西，有趣的是来这的你！"
 website = "https://injahow.com/"
@@ -239,4 +214,25 @@ title = "茈羽酱的小屋"
 description = "一个萌新站长的折腾日记"
 website = "https://moedk.com"
 image = "https://moedk.com/images/icon.png"
+reason = "网站无法访问"
+
+[[lost_links]]
+title = "Fankes"
+description = "方方"
+website = "https://blog.fankes.com/"
+image = "https://assets.moedev.cn/blog/photo/images/2025/e5f256422d6470acba526edf42906fef!webp"
+reason = "友链未找到"
+
+[[links]]
+title = "果果小站"
+description = "人生如梦，一尊还酹江月。"
+website = "https://呐.cn/"
+image = "https://assets.moedev.cn/blog/photo/images/2025/tSeu.png!webp"
+reason = "SSL证书未更新"
+
+[[links]]
+title = "老鱼干"
+description = "专注于IT互联网"
+website = "https://www.tinyfish.top/"
+image = "https://weavatar.com//avatar/1292b9f928d868fefeb58d42790a55ee?s=80&d=404"
 reason = "网站无法访问"
