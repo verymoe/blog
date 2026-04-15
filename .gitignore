@@ -2,6 +2,7 @@ public
 resources
 .hugo_build.lock
 .DS_Store
+.claude/settings.local.json
 assets/jsconfig.json
 node_modules
 dart-sass/
