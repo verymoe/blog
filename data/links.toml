@@ -185,6 +185,12 @@ description = "In the dawn, towards the sunrise."
 website = "https://www.sunnypai.top"
 image = "https://assets.moedev.cn/blog/photo/images/2025/%25E7%25BE%258E%25E6%25B3%25A2%25E9%2587%258C.webp"
 
+[[links]]
+title = "CobaltSalt"
+description = "放下个人素质 享受缺德人生"
+website = "https://www.yizhipikaqiu.top/"
+image = "https://www.yizhipikaqiu.top/More/statics/img/head.png"
+
 # 失联友链
 [[lost_links]]
 title = "无何有之乡"
