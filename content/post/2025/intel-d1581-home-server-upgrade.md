@@ -14,7 +14,6 @@ categories: tech
 
 在最近一次断电后，家里的老服务器便未能再次成功启动。此前家里的软路由、HA和咱自用的容器服务器等设施都运行在这上面。于是购置一台新的服务器就成了需要马上解决的问题。
 
-<!--more-->
 
 老服务器是博主在高中的时候用可怜的预算组的，由一块退役X8DTL-3F主板搭配双路X5680和混插的32G内存组成，硬盘在后期也只有一块英睿达MX500，电源在搬出准系统后用的是一款捡废品的不知名老电源，待机功耗达到了相当恐怖的100-110w。（一年下来电费都够买一台全新的服务器了）
 
@@ -30,10 +29,8 @@ categories: tech
 
 ![](https://assets.moedev.cn/blog/photo/images/2025/2968d579479463334834d2f67b7ec886.jpeg!webp_white_sign)
 
-::: grid {cols=2,rows=1,type=images}
 ![D-1581 Q3板U](https://assets.moedev.cn/blog/photo/images/2025/20250122112601528.png!webp_white_sign)
 ![4根16GB DDR3L低压1666Mhz三星内存条](https://assets.moedev.cn/blog/photo/images/2025/20250122112620502.png!webp_white_sign)
-:::
 
 ### 硬盘
 
@@ -41,11 +38,8 @@ categories: tech
 
 ![](https://assets.moedev.cn/blog/photo/images/2025/bb2104a889575a48dcb691c455fc5259.jpeg!webp_white_sign)
 
-::: grid {cols=2,rows=1,type=images}
 ![](https://assets.moedev.cn/blog/photo/images/2025/c2d803ccdaf0c6767ed4337364b0e8bd.jpeg!webp_white_sign)
-
 ![](https://assets.moedev.cn/blog/photo/images/2025/ee80a0c4774359b1cc2df8e886b65280.jpeg!webp_white_sign)
-:::
 
 ### 电源&机箱
 
@@ -57,10 +51,8 @@ categories: tech
 
 拆掉旧主板，然后水洗散热器里的灰尘，不停歇的跑了整整两三年还是积了不少灰。
 
-::: grid {cols=2,rows=1,type=images}
 ![](https://assets.moedev.cn/blog/photo/images/2025/20250122164632909.png!webp_white_sign)
 ![](https://assets.moedev.cn/blog/photo/images/2025/20250122164600246.png!webp_white_sign)
-:::
 
 ### 寨板内存问题
 
@@ -78,10 +70,8 @@ categories: tech
 
 ![](https://assets.moedev.cn/blog/photo/images/2025/20250122165137765.png!webp_white_sign)
 
-::: grid {cols=2,rows=1,type=images}
 ![](https://assets.moedev.cn/blog/photo/images/2025/20250122164813597.png!webp_white_sign)
 ![](https://assets.moedev.cn/blog/photo/images/2025/b7f78dee4d1961936b4fdcc19024413e.jpeg!webp_white_sign)
-:::
 
 ### 内存问题分析
 
@@ -107,10 +97,8 @@ categories: tech
 
 单核&多核测试结果：
 
-::: grid {cols=2,rows=1,type=images}
 ![](https://assets.moedev.cn/blog/photo/images/2025/20250122172921849.png!webp_white_sign)
 ![](https://assets.moedev.cn/blog/photo/images/2025/20250122172939377.png!webp_white_sign)
-:::
 
 单核可以说是惨不忍睹，但是家里云这种场景来说，完全够用了。希望这台机器能够稳定使用5个年头吧，到时候估计就能玩上arm洋垃圾了。
 
