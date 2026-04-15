@@ -1,85 +1,66 @@
 <!-- 正常友链（随机洗牌） -->
 <div id="links-container" class="article-list--compact links links-grid">
     {{ range $link := hugo.Data.links.links }}
-        <article>
-            <a href="{{ $link.website }}" target="_blank" rel="noopener">
-                <div class="article-details">
-                    <h2 class="article-title">
-                        {{- $link.title -}}
-                    </h2>
-                    <footer class="article-meta">
-                        {{ with $link.description }}
-                            {{ . }}
-                        {{ else }}
-                            {{ $link.website }}
-                        {{ end }}
-                    </footer>
-                </div>
+    <article>
+        <a href="{{ $link.website }}" target="_blank" rel="noopener">
+            <div class="article-details">
+                <h2 class="article-title">{{- $link.title -}}</h2>
+                <footer class="article-meta">
+                    {{ with $link.description }} {{ . }} {{ else }} {{
+                    $link.website }} {{ end }}
+                </footer>
+            </div>
 
-                {{- $image := partial "helper/image" (dict "Image" $link.image "Resources" $.Resources "Context" .) -}}
-                {{- with $image -}}
-                    <div class="article-image">
-                       {{ partial "helper/thumbnail-image" (dict
-                            "Resource" .Resource
-                            "Width" 60
-                            "Height" 60
-                            "Resize" $.Site.Params.ImageProcessing.Thumbnail.Enabled
-                            "Attributes" (dict
-                                "src" $image.Permalink
-                                "alt" $link.title
-                                "loading" "lazy"
-                                "width" .Width
-                                "height" .Height
-                            )
-                        ) }}
-                    </div>
-                {{ end }}
-            </a>
-        </article>
+            {{- $image := partial "helper/image" (dict "Image" $link.image
+            "Resources" $.Resources "Context" .) -}} {{- with $image -}}
+            <div class="article-image">
+                {{ partial "helper/thumbnail-image" (dict "Resource" .Resource
+                "Width" 60 "Height" 60 "Resize"
+                $.Site.Params.ImageProcessing.Thumbnail.Enabled "Attributes"
+                (dict "src" $image.Permalink "alt" $link.title "loading" "lazy"
+                "width" .Width "height" .Height ) ) }}
+            </div>
+            {{ end }}
+        </a>
+    </article>
     {{ end }}
 </div>
 <noscript>
-    <style>.links-grid { visibility: visible !important; }</style>
+    <style>
+        .links-grid {
+            visibility: visible !important;
+        }
+    </style>
 </noscript>
 
 <!-- 失联友链 -->
 {{ with hugo.Data.links.lost_links }}
-<h3 class="links-lost-title">以下友链已失联</h3>
+<h3 class="links-lost-title">以下友链暂时存在问题</h3>
 <div class="article-list--compact links links-grid links-lost">
     {{ range $link := . }}
-        <article>
-            <a href="{{ $link.website }}" target="_blank" rel="noopener">
-                <div class="article-details">
-                    <h2 class="article-title">
-                        {{- $link.title -}}
-                    </h2>
-                    <footer class="article-meta">
-                        {{ with $link.reason }}
-                            <span class="lost-reason">{{ . }}</span>
-                        {{ end }}
-                    </footer>
-                </div>
+    <article>
+        <a href="{{ $link.website }}" target="_blank" rel="noopener">
+            <div class="article-details">
+                <h2 class="article-title">{{- $link.title -}}</h2>
+                <footer class="article-meta">
+                    {{ with $link.reason }}
+                    <span class="lost-reason">{{ . }}</span>
+                    {{ end }}
+                </footer>
+            </div>
 
-                {{- $image := partial "helper/image" (dict "Image" $link.image "Resources" $.Resources "Context" .) -}}
-                {{- with $image -}}
-                    <div class="article-image">
-                       {{ partial "helper/thumbnail-image" (dict
-                            "Resource" .Resource
-                            "Width" 60
-                            "Height" 60
-                            "Resize" $.Site.Params.ImageProcessing.Thumbnail.Enabled
-                            "Attributes" (dict
-                                "src" $image.Permalink
-                                "alt" $link.title
-                                "loading" "lazy"
-                                "width" .Width
-                                "height" .Height
-                            )
-                        ) }}
-                    </div>
-                {{ end }}
-            </a>
-        </article>
+            {{- $image := partial "helper/image" (dict "Image" $link.image
+            "Resources" $.Resources "Context" .) -}} {{- with $image -}}
+            <div class="article-image">
+                {{ partial "helper/thumbnail-image" (dict "Resource" .Resource
+                "Width" 60 "Height" 60 "Resize"
+                $.Site.Params.ImageProcessing.Thumbnail.Enabled "Attributes"
+                (dict "src" $image.Permalink "alt" $link.title "loading" "lazy"
+                "width" .Width "height" .Height ) ) }}
+            </div>
+            {{ end }}
+        </a>
+    </article>
     {{ end }}
 </div>
 {{ end }}
