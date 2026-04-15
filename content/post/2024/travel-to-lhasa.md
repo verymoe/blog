@@ -26,22 +26,22 @@ _本文多图流水账警告_
 
 出发那天西安的光线非常足，落地的时候看见飞机影子挺好看的，角度也很合适，就顺便录了个视频。
 
-<video src="https://assets.moedev.cn/blog/photo/images/2024/lhasa/VID_20241023_101357.webm" controls="controls"></video>
+{{< video src="https://assets.moedev.cn/blog/photo/images/2024/lhasa/VID_20241023_101357.webm" >}}
 
 下面是从西安咸阳到拉萨贡嘎拍的一些。
 
-<video src="https://assets.moedev.cn/blog/photo/images/2024/lhasa/VID_20241023_150756.webm" controls="controls"></video>
+{{< video src="https://assets.moedev.cn/blog/photo/images/2024/lhasa/VID_20241023_150756.webm" >}}
 
-::: grid {cols=3,rows=3,gap=12,type=images}
-![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/IMG_20241023_101147.webp)
+![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/IMG_20241023_101147.webp) 
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/IMG_20241023_094149.webp)
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_124641.webp)
+
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_154902.webp)
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_155038.webp)
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_134304.webp)
+
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_122801.webp)
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_162509.webp)
-:::
 
 西安飞拉萨的这一段可以看到高原的雪山，有一说一确实很漂亮~~喵~~，图 4 是雅鲁藏布江，图 5 是拉萨的城区，这布局真的是强迫症福音，太规整了。
 下飞机的时候还有人接风（太高级了），对面给我们一行人进行了献[哈达](https://zh.wikipedia.org/zh-hans/%E5%93%88%E8%BE%BE)。
@@ -54,14 +54,12 @@ _本文多图流水账警告_
 
 导游在路上唱藏歌。
 
-<video src="https://assets.moedev.cn/blog/photo/images/2024/lhasa/VID_20241023_172941.webm" controls="controls"></video>
+{{< video src="https://assets.moedev.cn/blog/photo/images/2024/lhasa/VID_20241023_172941.webm" >}}
 
 住的地方也是非常棒，外面是雅鲁藏布江，向右还能直接望到布达拉宫。
 
 ![江景房](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_184212.webp)
-
 ![窗外就是雅鲁藏布江](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_184339.webp)
-
 ![在窗台能望见布达拉宫](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_184302.webp)
 
 虽然能直接望到布达拉宫，但还是有些距离的，毕竟不在一个区。
@@ -72,15 +70,10 @@ _本文多图流水账警告_
 
 结果是，事实证明不能指望在家乡以外吃到任何自称正宗的东西…..
 
-::: grid {cols=4,rows=1,gap=12,type=images}
-![MVIMG_20241023_193652.webp](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_193652.webp)
-
-![MVIMG_20241023_194521.webp](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_194521.webp)
-
-![MVIMG_20241023_195841.webp](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_195841.webp)
-
-![MVIMG_20241023_194908.webp](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_194908.webp)
-:::
+![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_193652.webp)
+![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_194521.webp)
+![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_195841.webp)
+![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241023_194908.webp)
 
 在万达看见了熟悉的滚筒洗衣机（其实我至今仍不会玩）。
 
@@ -93,37 +86,26 @@ _本文多图流水账警告_
 ## 布达拉宫
 
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_110912.webp)
+![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_105346.webp)
 
-
-::: gallery
-![MVIMG_20241027_105346.webp](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_105346.webp)
-
-
-![MVIMG_20241027_111810.webp](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_111810.webp)
-
-![MVIMG_20241027_112241.webp](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_112241.webp)
-:::
+![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_111810.webp)
+![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_112241.webp)
 
 走进了才发现布达拉宫的墙角其实是由草构成的。
+
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_113146.webp)
 
 中途的高度就和鸟肩并肩了。
 
-<video src="https://assets.moedev.cn/blog/photo/images/2024/lhasa/VID_20241027_114008.webm" controls="controls"></video>
+{{< video src="https://assets.moedev.cn/blog/photo/images/2024/lhasa/VID_20241027_114008.webm" >}}
 
 抵达顶端部分。
 
-::: gallery
-![MVIMG_20241027_114518.webp](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_114518.webp)
+![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_114518.webp)
+![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_122303.webp)
 
-![MVIMG_20241027_122303.webp](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_122303.webp)
-
-![MVIMG_20241027_122253.webp](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_122253.webp)
-
-![MVIMG_20241027_124951.webp](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_124951.webp)
-:::
-
-
+![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_122253.webp)
+![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_124951.webp)
 
 ![文创馆中唯一看上的却是非卖品](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241027_123917.webp)
 
@@ -144,13 +126,10 @@ _本文多图流水账警告_
 一行人都没吃的尽兴，于是晚上去恰了顿自助~~烤肉~~炒菜。
 
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/MVIMG_20241028_123939.webp)
-
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/IMG_20241107_233047.webp)
 
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/IMG_20241107_232753.webp)
-
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/IMG_20241107_232728.webp)
-
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/IMG_20241107_232715.webp)
 
 我们这波人把烤肉吃成了炒菜。
@@ -170,6 +149,7 @@ _本文多图流水账警告_
 ![地府机场 APM](https://assets.moedev.cn/blog/photo/images/2024/lhasa/IMG_20241029_174955.webp)
 
 这或许是半年来吃过最有四川味的面。
+
 ![两舱休息室的牛肉面](https://assets.moedev.cn/blog/photo/images/2024/lhasa/IMG_20241029_180417.webp)
 
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/IMG_20241029_210635.webp)
@@ -177,16 +157,16 @@ _本文多图流水账警告_
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/IMG_20241029_213937.webp)
 
 无意在画面正中间拍到了世界第一烂尾楼。
+
 ![天津夜间上空——711 大厦](https://assets.moedev.cn/blog/photo/images/2024/lhasa/IMG_20241029_230847.webp)
 
 顺便把降落过程拍下来了
 
-<video src="https://assets.moedev.cn/blog/photo/images/2024/lhasa/VID_20241029_232810.webm" controls="controls"></video>
+{{< video src="https://assets.moedev.cn/blog/photo/images/2024/lhasa/VID_20241029_232810.webm" >}}
 
 落地国际航站楼坐的摆渡车，一下飞机就吸上了天津的雾霾。
 
 这次给我的感受就是，西藏物价是真的高，~~但幸运的是可以报销（不然我就得吐血了）~~（学校今年没预算了，餐补明年才给报销，已吐血），感受到了西藏人的纯朴。出门解锁新地点果然还是很棒，争取这几年能到全国多打卡一些地方吧~
 
 抵达终点（此处距离我休息的地方不到 200m）
-
 ![](https://assets.moedev.cn/blog/photo/images/2024/lhasa/IMG_20241030_003430.webp)
