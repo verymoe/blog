@@ -4,6 +4,7 @@ description:
 date: 2025-12-08 18:53:00+0000
 slug: fnos-nginx-reverse-proxy
 categories: tech
+tags: ["nginx", "fnos"]
 ---
 
 ## 问题分析

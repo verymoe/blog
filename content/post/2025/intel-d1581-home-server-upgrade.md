@@ -5,6 +5,7 @@ date: 2025-01-22 17:37:00+0000
 image: https://assets.moedev.cn/blog/photo/images/2025/20250122114505511.png!webp
 slug: intel-d1581-home-server-upgrade
 categories: tech
+tags: ["home-lab", "intel-d1581", "server", "proxmox-ve"]
 ---
 
 ## 缘由
