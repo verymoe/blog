@@ -2,6 +2,7 @@
 baseurl      = "https://verymoe.vercel.app"
 languageCode = "en-us"
 title        = "Shiro"
+timeZone     = "Asia/Singapore"
 
 # Theme i18n support
 # See all available values at https://github.com/CaiJimmy/hugo-theme-stack/tree/master/i18n
