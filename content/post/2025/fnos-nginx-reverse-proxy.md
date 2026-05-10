@@ -1,7 +1,7 @@
 ---
 title: 修复Nginx反代飞牛相册卡顿、视频无法加载
 description: 
-date: 2025-12-08 18:53:00+0000
+date: 2025-12-08 18:53:00
 slug: fnos-nginx-reverse-proxy
 categories: tech
 tags: ["nginx", "fnos"]

@@ -1,7 +1,7 @@
 ---
 title: 记录一次华硕高负载黑屏问题与售后经历
 description: 华硕无畏 Pro 16 2023 遇到高负载黑屏问题，官方售后体验极差，最终发现是华硕偷工减料电源不足引起的。
-date: 2026-04-25 17:00:00+0000
+date: 2026-04-25 17:00:00
 image: 
 slug: asus-vivobook-black-screen
 categories: note
