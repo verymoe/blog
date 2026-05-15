@@ -173,6 +173,12 @@ description = "放下个人素质 享受缺德人生"
 website = "https://www.yizhipikaqiu.top/"
 image = "https://www.yizhipikaqiu.top/More/statics/img/head.png"
 
+[[links]]
+title = "A/B's Blog"
+description = "B分之A的自留地"
+website = "https://zmoe.com/"
+image = "https://zmoe.com/wp-content/uploads/2026/05/cropped-5273c46b-f6d9-4a1e-b6f5-5b5d47a564ef.png"
+
 # 失联友链
 [[lost_links]]
 title = "无何有之乡"
