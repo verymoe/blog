@@ -173,6 +173,12 @@ description = "放下个人素质 享受缺德人生"
 website = "https://www.yizhipikaqiu.top/"
 image = "https://www.yizhipikaqiu.top/More/statics/img/head.png"
 
+[[links]]
+title = "Restent Ou"
+description = "Secret with Silent."
+website = "https://www.gxres.net"
+image = "https://library.gxres.net/images/avatars/gxres042.webp"
+
 # 失联友链
 [[lost_links]]
 title = "无何有之乡"
