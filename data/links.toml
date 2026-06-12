@@ -173,6 +173,12 @@ description = "放下个人素质 享受缺德人生"
 website = "https://www.yizhipikaqiu.top/"
 image = "https://www.yizhipikaqiu.top/More/statics/img/head.png"
 
+[[links]]
+title = "Thelia的随想"
+description = "一个记录自己随想的地方"
+website = "https://thelia.site"
+image = "https://thelia.site/wp-content/uploads/2025/08/cropped-oc头像.jpg"
+
 # 失联友链
 [[lost_links]]
 title = "无何有之乡"
@@ -180,13 +186,6 @@ description = "想要梦想与咸鱼兼得呢"
 website = "https://opau.cn/"
 image = "https://assets.moedev.cn/blog/photo/images/2025/UooH.jpg!webp"
 reason = "网站无法访问"
-
-[[lost_links]]
-title = "Thelia的随想"
-description = "一个记录自己随想的地方"
-website = "https://thelia.site"
-image = "https://thelia.site/wp-content/uploads/2025/08/cropped-oc头像.jpg"
-reason = "cloudflare-error-1000"
 
 [[lost_links]]
 title = "纯情"
