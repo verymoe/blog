@@ -20,11 +20,11 @@ tags: ["宝塔", "防火墙"]
 
 防火墙有什么用？
 
-1.可以有效拦截部分非法参数
+1. 可以有效拦截部分非法参数
 
-2.可以智能封禁非法访问（需修改防火墙规则）
+2. 可以智能封禁非法访问（需修改防火墙规则）
 
-3.等你探索~~~
+3. 等你探索~~~
 
 防火墙启用效果如图:
 
@@ -32,7 +32,7 @@ tags: ["宝塔", "防火墙"]
 
 下面是启用宝塔防火墙的教程
 
-1.进入你的宝塔后台,进入Nginx管理
+1. 进入你的宝塔后台,进入Nginx管理
 
 ![宝塔后台](https://assets.moedev.cn/blog/photo/images/2019/Hfae5514f97e24fbc8d160f224734d14di.png!webp)
 
@@ -40,7 +40,7 @@ tags: ["宝塔", "防火墙"]
 
 ![宝塔的nginx服务](https://assets.moedev.cn/blog/photo/images/2019/H505fae90ba9547cea1565356e0687747D.png!webp)
 
-2.在Nginx管理中找到配置修改
+2. 在Nginx管理中找到配置修改
 
 ![宝塔nginx配置修改](https://assets.moedev.cn/blog/photo/images/2019/Ha5d565ab78e94f5e8faaa90f57e02abd9.png!webp)
 
@@ -52,7 +52,7 @@ tags: ["宝塔", "防火墙"]
 
 ![在配置中去掉#](https://assets.moedev.cn/blog/photo/images/2019/Hf5df22ed70c94a009791dc5bb78149b0i.png!webp)
 
-3.重启Nginx服务,享受你的防火墙之力吧!
+3. 重启Nginx服务,享受你的防火墙之力吧!
 
 ![重启Nginx服务](https://assets.moedev.cn/blog/photo/images/2019/H18695005fc604632883c4c5fc959884bC.png!webp)
 

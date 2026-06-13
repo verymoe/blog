@@ -16,11 +16,9 @@ tags: ["VPN", "校园网", "破解"]
 
 注意！**仅供学习交流，请勿用于非法用途。**
 
->
 > 配套视频求支持(只含介绍)
 
 哔哩哔哩：`视频被和谐，待补档`
->
 
 ---
 
@@ -55,9 +53,7 @@ tags: ["VPN", "校园网", "破解"]
 
 ### 安装 OPENVPN 服务器[Windows]
 
->
 > 下载地址：[SoftEther 下载中心 (fishinfo.cn)](http://softether.fishinfo.cn/cn.aspx)
->
 
 1. 下载并安装 `server` 端（服务端） 如果是在本地服务器上连接并配置，则安装 server 后可以直接进行控制（本地主机搭建无用，必须是外网设备）。 如果是远程管理 server 端，则需要输入服务器公网IP端口(默认443)，默认无密码，登陆后提示修改密码。
 
@@ -75,9 +71,7 @@ tags: ["VPN", "校园网", "破解"]
 
 ### 客户端连接
 
->
 > 客户端下载地址：[OpenVPN Connect Client](https://openvpn.net/vpn-client/)
->
 
 双击刚刚保存的配置文件，按照提示导入，输入账户，连接并输入密码就成功启动了 如果连接超时，正常网络下却能连接，那么很可能是53端口未开放，需要换个端口试试。
 
@@ -89,18 +83,15 @@ tags: ["VPN", "校园网", "破解"]
 
 ### 下载相关局域网扫描软件
 
->
 > 网络扫描软件：Advanced port scanner
-
-官网下载：[传送门](https://www.advanced-port-scanner.com/cn/)
-
-蓝凑云：[点击下载](https://1812z.lanzouw.com/ioeBYxqddje) 密码：61yo
 >
+> 官网下载：[传送门](https://www.advanced-port-scanner.com/cn/)
+>
+> 蓝凑云：[点击下载](https://1812z.lanzouw.com/ioeBYxqddje) 密码：61yo
 >
 > MAC地址修改软件：天天修改器
-
-蓝凑云：[点击下载](https://1812z.lanzouw.com/ihiduwgbiah)
 >
+> 蓝凑云：[点击下载](https://1812z.lanzouw.com/ihiduwgbiah)
 
 ### 扫描局域网
 
@@ -153,9 +144,7 @@ tags: ["VPN", "校园网", "破解"]
 
 OpenVpn手机版下载：
 
->
 > 蓝奏云：[点击下载](https://1812z.lanzoub.com/i5Lhrwhqofe) 密码：by5o
->
 
 ---
 

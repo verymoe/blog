@@ -28,7 +28,6 @@ FastCGI_Cache是Nginx的缓存模块，能够从Nginx层面实现网页静态化
 
 ## 创建缓存目录
 
->
 > 我的服务器环境：TencentOS3+宝塔面板+Nginx-tengine
 
 手动创建以下两个目录，并设置权限为**755**。
@@ -36,7 +35,6 @@ FastCGI_Cache是Nginx的缓存模块，能够从Nginx层面实现网页静态化
 `/tmp/wpcache`
 
 `/tmp/wpcache/temp`
->
 
 通过终端创建
 
@@ -65,13 +63,11 @@ fastcgi_ignore_headers Cache-Control Expires Set-Cookie;
 ```
 
 ![代码位置](https://assets.moedev.cn/blog/photo/images/2022/Ualg.png!webp)
->
 > 注意：
 >
 > 1. 插入站点配置的方法适合单站点，如果需要开启多站点缓存请尝试直接修改 Nginx 配置。
 > 2. 在`keys_zone=WORDPRESS:128m`中，`WORDPRESS`是缓存名，需要和下面的配置对应，`128m`是缓存大小限制，可以适当调整。
 > 3. `/tmp/wpcache`是缓存路径，需要提前创建，不然宝塔面板可能会报错。
->
 
 ### 将以下代码插入网站配置 #SSL-END 注释后面
 
@@ -119,13 +115,11 @@ fastcgi_ignore_headers Cache-Control Expires Set-Cookie;
 
 ![代码插入位置](https://assets.moedev.cn/blog/photo/images/2022/b1cz.png!webp)
 ![插入代码位置](https://assets.moedev.cn/blog/photo/images/2022/bYOC.png!webp)
->
 > 注意：
 >
 > 1. `务必修改 sock 版本`，默认PHP7.4，只需将其替换为你当前使用的版本。 例如你用的是PHP7.3就修改成 `/tmp/php-cgi-73.sock`
 > 2. 这里没有配置 purge 地址，因为很容易出现冲突，下面将采取插件直接清除缓存目录的方法。（不懂的话你完全可以忽略这句）
 > 3. 建议阅读一下配置中的注释
->
 
 ### 检查缓存状态
 

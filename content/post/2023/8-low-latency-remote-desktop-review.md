@@ -13,7 +13,7 @@ categories: "tech"
 > 原始地址：[https://justmyblog.net/1199.html](https://justmyblog.net/1199.html)  
 > Web Archive：[https://web.archive.org/web/20231201062854/https://justmyblog.net/1199.html](https://web.archive.org/web/20231201062854/https://justmyblog.net/1199.html)  
 
-# 前言
+## 前言
 
 大学不准备买笔记本，直接用平板+远程台式来代替。
 
@@ -24,7 +24,11 @@ categories: "tech"
 1. 画面
 2. 控制方式支持情况
 3. 连接易用性
-4. 额外功能 **测试环境：WIFI6的小米平板6pro+有线台式机** 总览： 一.Parsec
+4. 额外功能
+
+**测试环境：WIFI6的小米平板6pro+有线台式机**
+
+### 一.Parsec
   ![·](https://assets.moedev.cn/blog/photo/images/2023/EM6D.png!webp)
 
 应该是家喻户晓的软件了，这也是我最常用的远控软件，首推
@@ -36,7 +40,7 @@ categories: "tech"
 - 仅模拟鼠标触控，支持键鼠，支持手柄，支持笔【收费】
 - p2p连接方便快速，但登陆有可能失败【需要梯子】
 
-## 二.微软远程桌面【RDP】
+### 二.微软远程桌面【RDP】
 
 系统自带的远程桌面，使用方便
 
@@ -45,7 +49,7 @@ categories: "tech"
 - 需要自己配置远程访问方式【ipv6或内网穿透等】
 - 麦克风，相机，储存，自动旋转屏幕
 
-## 三.闪门
+### 三.闪门
 
 国产的一款远程软件，可以当parsec的替代品
 
@@ -57,7 +61,7 @@ categories: "tech"
 - p2p连接方便快速
 - 虚拟手柄，麦克风
 
-## 四.Moonlight【n卡用】
+### 四.Moonlight【n卡用】
 
 ![·](https://assets.moedev.cn/blog/photo/images/2023/EKHt.jpg!webp)
 
@@ -69,13 +73,13 @@ N卡的串流软件，拿来当远程也不是不行
 - 需要自己配置远程访问方式【ipv6或内网穿透等】
 - 虚拟手柄
 
-## 五.AMD link
+### 五.AMD link
 
 emmm，我的hd7850烧了，没法测试
 
 只知道延迟极低，有虚拟手柄，但是连接挺蛋疼的...
 
-## 六.Steam Link
+### 六.Steam Link
 
 ![·](https://assets.moedev.cn/blog/photo/images/2023/EpjW.jpg!webp)
 
@@ -87,7 +91,7 @@ Steam的游戏串流软件，对很多游戏有专门优化，打游戏体验不
 - 需要自己配置远程访问方式【ipv6或内网穿透等】
 - Steam里的游戏很多适配完美
 
-## 七.ToDesk
+### 七.ToDesk
 
 国产远程桌面软件，免费的功能也足够使用，不过真要用不推荐，卡卡的
 
@@ -97,7 +101,7 @@ Steam的游戏串流软件，对很多游戏有专门优化，打游戏体验不
 - 自动p2p，不支持也能服务器中转，连接成功率高
 - 都要收费的，测不起0..0
 
-## 八.Spacedesk
+### 八.Spacedesk
 
 本来是局域网扩展屏幕的软件，但是太好用了，就拿来说说吧，这也是里面唯一免费支持手写笔的了...
 
@@ -107,6 +111,6 @@ Steam的游戏串流软件，对很多游戏有专门优化，打游戏体验不
 - 需要自己配置远程访问方式【ipv6或内网穿透等】
 - 自动旋转屏幕
 
-#### 总结：不同情况用不同软件，平板当笔记本用完全可以，至于竞技游戏还是老老实实本地运行吧
+### 总结：不同情况用不同软件，平板当笔记本用完全可以，至于竞技游戏还是老老实实本地运行吧
 
 **TIPS：平板用键盘鼠标不适应，很大概率是蓝牙延迟问题，有条件还是有线或者2.4g吧，另外一般鼠标只有125hz刷新率，手感也不行**

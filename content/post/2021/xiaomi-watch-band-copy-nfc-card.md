@@ -43,15 +43,15 @@ PS：相关程序和驱动已打包放在文末
 接口简单说明（不严谨）
 
 GND：电源的负极
- VCC：电源的正极
- TXD：发送数据
- RXD：接收数据
- 注意：发送端和接收端要对应，一发一收，别把电源接错，可能会烧坏
+VCC：电源的正极
+TXD：发送数据
+RXD：接收数据
+注意：发送端和接收端要对应，一发一收，别把电源接错，可能会烧坏
 
 ![pn532](https://assets.moedev.cn/blog/photo/images/2021/ZZaQ.webp!webp)
 
 然后把pn532接在电脑上(PL2303可能需要装驱动)
- 在设备管理器中确定设备正常工作无感叹号(有感叹号说明驱动可能有问题)
+在设备管理器中确定设备正常工作无感叹号(有感叹号说明驱动可能有问题)
 
 检查方法：
 
@@ -74,7 +74,7 @@ CH340g驱动安装界面
 ## ②打开软件测试连接读卡器
 
 解压好MifareOneTool后双击打开
- PS：官方项目地址：https://github.com/xcicode/MifareOneTool
+PS：官方项目地址：https://github.com/xcicode/MifareOneTool
 
 ![](https://assets.moedev.cn/blog/photo/images/2021/OalK.png!webp)
 

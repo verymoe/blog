@@ -29,8 +29,8 @@ tags: ["CSS", "css heimu", "代码", "网站隐藏文字"]
 ## 原理分析
 
 文字背景和字体都设置为黑色，当鼠标选中时高亮
- `<span style="color:#66ccff; background-color:#66ccff;">黑幕下的文字<span>`
- 然后再弄个自动高亮就ok了
+`<span style="color:#66ccff; background-color:#66ccff;">黑幕下的文字<span>`
+然后再弄个自动高亮就ok了
 
 ## 直接放CSS源码
 
@@ -87,18 +87,18 @@ body:not(.heimu_toggle_on) .new:hover .heimu.off {
 ## 基本食用方法
 
 方法很简单
- `<span class="heimu" title="光标显示内容">黑幕内容</span> `
- 举个栗子
- `<span class="heimu" title="你知道的太多了">嘿嘿嘿</span> `
- 效果:||嘿嘿嘿||
- 此CSS支持评论区使用(采用Markdown评论的主题不支持,因为不支持html)
+`<span class="heimu" title="光标显示内容">黑幕内容</span>`
+举个栗子
+`<span class="heimu" title="你知道的太多了">嘿嘿嘿</span>`
+效果:||嘿嘿嘿||
+此CSS支持评论区使用(采用Markdown评论的主题不支持,因为不支持html)
 
 ## 高级食用方法
 
 基本食用方法够用了所以其它高级用法请参见萌娘百科黑幕相关内容
- 萌娘百科:[黑幕模板](https://zh.moegirl.org/zh-hans/Template:%E9%BB%91%E5%B9%95)
- 萌娘百科:[模板讨论:黑幕](https://zh.moegirl.org/zh-hans/Template_talk:%E9%BB%91%E5%B9%95)
- 欢迎在评论区分享更高级的食用方法
+萌娘百科:[黑幕模板](https://zh.moegirl.org/zh-hans/Template:%E9%BB%91%E5%B9%95)
+萌娘百科:[模板讨论:黑幕](https://zh.moegirl.org/zh-hans/Template_talk:%E9%BB%91%E5%B9%95)
+欢迎在评论区分享更高级的食用方法
 
 > [!NOTE]
 > 欢迎在本文章评论区测试效果!

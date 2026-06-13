@@ -14,11 +14,9 @@ tags: ["业余无线电", "开箱"]
 > 原始地址：[https://justmyblog.net/1127.html](https://justmyblog.net/1127.html)  
 > Web Archive：[https://web.archive.org/web/20231201062854/https://justmyblog.net/1127.html](https://web.archive.org/web/20231201062854/https://justmyblog.net/1127.html)  
 
->
 > ~~无线电~~ x
-
-无限垫 √
 >
+> 无限垫 √
 
 先来简单的开个箱
 

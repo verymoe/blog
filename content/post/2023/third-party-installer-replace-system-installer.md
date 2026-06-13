@@ -13,15 +13,15 @@ categories: "tech"
 > 原始地址：[https://justmyblog.net/1188.html](https://justmyblog.net/1188.html)  
 > Web Archive：[https://web.archive.org/web/20231201062854/https://justmyblog.net/1188.html](https://web.archive.org/web/20231201062854/https://justmyblog.net/1188.html)  
 
-#### 好早之前，因为MIUI自带安装器安装速度慢，默认还有广告，安全检测，我就出过一个教程分享R安装组件。
+## 好早之前，因为MIUI自带安装器安装速度慢，默认还有广告，安全检测，我就出过一个教程分享R安装组件。
 
-#### 现在又要搞啥APP审核，借此给大家分享下几个好用的第三方安装器
+## 现在又要搞啥APP审核，借此给大家分享下几个好用的第三方安装器
 
 ---
 
-#### 3个软件蓝凑云下载地址：https://1812z.lanzoub.com/b02exkyba
+## 3个软件蓝凑云下载地址：https://1812z.lanzoub.com/b02exkyba
 
-#### 密码:eogb
+## 密码:eogb
 
 ---
 
