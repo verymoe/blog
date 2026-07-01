@@ -12,10 +12,10 @@ website = "https://www.fghrsh.net/"
 image = "https://assets.moedev.cn/blog/photo/images/2025/9dd067b26526f97064c68b5ce89d60d1!webp"
 
 [[links]]
-title = "Kano酱の博客"
+title = "KanoChan"
 description = "只要你喜欢kano，我们就是好朋友！"
 website = "https://kanochan.net/"
-image = "https://assets.moedev.cn/blog/photo/images/2025/2a11c733e28efd4735e5b0604cc26a30!webp"
+image = "https://kanochan.net/avatar.avif"
 
 [[links]]
 title = "北忆Blog"
