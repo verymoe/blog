@@ -1,0 +1,56 @@
+{{/*
+    Site override of Hugo Theme Stack's helper/image partial.
+
+    Based on hugo-theme-stack v4.0.3 (commit 3e123a3).
+    Remote images deliberately remain external so builds never depend on
+    resources.GetRemote. Local image processing keeps the upstream behavior.
+
+    When upgrading the theme, compare this partial's input/output contract with:
+    layouts/_partials/helper/image.html
+*/}}
+
+{{ $result := dict }}
+
+{{ if .Image }}
+    {{ $url := urls.Parse .Image }}
+    {{ $permalink := .Image }}
+
+    {{ $result = dict
+        "Resource" nil
+        "Permalink" $permalink
+        "Height" nil
+        "Width" nil
+    }}
+
+    {{ if not (in (slice "https" "http") $url.Scheme) }}
+        {{/* Only local images are resolved and processed during the build. */}}
+        {{ $resource := .Resources.Get (printf "%s" (.Image | safeURL)) }}
+
+        {{ if $resource }}
+            {{ if and .Context.Site.Params.imageProcessing.autoOrient (reflect.IsImageResourceProcessable $resource) }}
+                {{ $filter := images.AutoOrient }}
+                {{ $resource = $resource | images.Filter $filter }}
+            {{ end }}
+
+            {{ $permalink = $resource.RelPermalink }}
+
+            {{ if reflect.IsImageResourceWithMeta $resource }}
+                {{ $result = dict
+                    "Resource" $resource
+                    "Permalink" $permalink
+                    "Height" $resource.Height
+                    "Width" $resource.Width
+                }}
+            {{ else }}
+                {{ $result = dict
+                    "Resource" $resource
+                    "Permalink" $permalink
+                    "Height" nil
+                    "Width" nil
+                }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ return $result }}

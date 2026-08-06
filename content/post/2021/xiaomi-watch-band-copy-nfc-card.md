@@ -104,7 +104,7 @@ PS：官方项目地址：https://github.com/xcicode/MifareOneTool
 
 ### 先看完整步骤(此处是GIF可能加载较慢)
 
-![](https://assets.moedev.cn/blog/photo/images/2021/wfVO.gif!webp)
+![](https://assets.moedev.cn/blog/photo/images/2021/wfVO.gif)
 
 解释一下这一步，把原卡的ID复制到一份完全无密钥的卡数据中，这样只有ID而不含密钥的数据就可以被米环和米表模拟下来
 
