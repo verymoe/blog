@@ -1,0 +1,106 @@
+/* Shared article-page material for cards throughout the site. */
+:root {
+    --shiro-wallpaper: url("https://blog-wallpaper.moedev.cn/api/random");
+}
+
+:root[data-scheme="light"] {
+    --body-background: #f7f8fc;
+    --body-text-color: #30394a;
+    --card-text-color-main: #101522;
+    --card-text-color-secondary: #273244;
+    --card-text-color-tertiary: #30394a;
+    --card-border-radius: 24px;
+    --shiro-wallpaper-opacity: 0.7;
+    --shiro-wallpaper-filter: none;
+    --shiro-surface-background: rgba(255, 255, 255, 0.66);
+    --shiro-surface-edge: rgba(255, 255, 255, 0.68);
+}
+
+:root[data-scheme="dark"] {
+    --body-background: #111722;
+    --body-text-color: #d2d8e3;
+    --card-text-color-main: #f5f7fc;
+    --card-text-color-secondary: #e0e5ee;
+    --card-text-color-tertiary: #cbd3e1;
+    --card-border-radius: 24px;
+    --shiro-wallpaper-opacity: 0.58;
+    --shiro-wallpaper-filter: brightness(0.45) saturate(0.95);
+    --shiro-surface-background: rgba(17, 24, 36, 0.72);
+    --shiro-surface-edge: rgba(230, 241, 255, 0.18);
+}
+
+:root[data-scheme] {
+    body {
+        isolation: isolate;
+        &::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background: var(--shiro-wallpaper, none) right center / cover no-repeat;
+            opacity: var(--shiro-wallpaper-opacity);
+            filter: var(--shiro-wallpaper-filter);
+        }
+    }
+
+    // Match the article surface without introducing filter/positioning contexts.
+    .article-list > article,
+    .article-list--compact:not(.links-grid),
+    .links-grid > article,
+    .section-card,
+    .pagination,
+    .widget-archive--list,
+    .tagCloud-tags a,
+    .widget--toc,
+    .search-form,
+    .article-page .main-article,
+    #tcomment .twikoo {
+        background: var(--shiro-surface-background);
+        outline: 1px solid var(--shiro-surface-edge);
+        outline-offset: -1px;
+
+        &:focus-visible {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 3px;
+        }
+    }
+
+    .search-form {
+        border-radius: var(--card-border-radius);
+        input {
+            background-color: transparent;
+            box-shadow: none;
+            &:focus-visible {
+                outline: 2px solid var(--accent-color);
+                outline-offset: 3px;
+            }
+        }
+    }
+    .article-toc details {
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 767px) {
+    :root[data-scheme="light"] {
+        --shiro-wallpaper-opacity: 0.38;
+        --shiro-surface-background: rgba(255, 255, 255, 0.7);
+    }
+    :root[data-scheme="dark"] {
+        --shiro-wallpaper-opacity: 0.4;
+    }
+}
+
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more), print {
+    :root[data-scheme] {
+        --shiro-surface-background: var(--card-background);
+    }
+}
+
+@media print {
+    :root[data-scheme] body::before {
+        content: none;
+    }
+}
