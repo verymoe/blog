@@ -1,0 +1,2 @@
+# Keep explicit article dates; diary files can derive their date from YYYY-MM-DD.md.
+date = ["date", ":filename", "publishDate", "lastmod"]

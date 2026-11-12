@@ -1,0 +1,46 @@
+{{/* 104 narrow time bins per year, positioned by the actual day of writing. */}}
+{{ $years := .Years }}
+{{ $bins := dict }}{{ $maximum := 1 }}{{ $yearCounts := dict }}
+{{ range .Pages }}
+    {{ $year := .Date.Format "2006" }}
+    {{ $first := time.AsTime (printf "%s-01-01" $year) }}
+    {{ $days := ($first.AddDate 1 0 -1).YearDay }}
+    {{ $bin := int (div (mul (sub .Date.YearDay 1) 104) $days) }}
+    {{ $key := printf "%s-%d" $year $bin }}
+    {{ $words := .WordCount }}{{ if lt $words 1 }}{{ $words = 1 }}{{ end }}
+    {{ $sum := add (index $bins $key | default 0) $words }}
+    {{ $bins = merge $bins (dict $key $sum) }}
+{{ end }}
+{{ range $bins }}{{ if gt . $maximum }}{{ $maximum = . }}{{ end }}{{ end }}
+{{ range .Pages.GroupByDate "2006" }}{{ $yearCounts = merge $yearCounts (dict .Key (len .Pages)) }}{{ end }}
+<nav class="journal-years" aria-label="Journal year">
+    <div class="journal-year-strip">
+        {{ $oldest := int (index $years (sub (len $years) 1)) }}
+        {{ $newest := int (index $years 0) }}
+        {{ range seq $oldest $newest }}
+            {{ $year := printf "%d" . }}
+            {{ $first := time.AsTime (printf "%s-01-01" $year) }}
+            {{ $days := ($first.AddDate 1 0 -1).YearDay }}
+            {{ $total := index $yearCounts $year | default 0 }}
+            <a class="journal-year-link" href="#journal-year-{{ $year }}" data-journal-year-link="{{ $year }}" aria-label="{{ $year }}, {{ $total }} {{ if eq $total 1 }}entry{{ else }}entries{{ end }}">
+                <span class="journal-year-bars" aria-hidden="true">
+                    {{ range $bin := seq 0 103 }}
+                        {{ $words := index $bins (printf "%s-%d" $year $bin) | default 0 }}
+                        {{ $height := div (mul $words 100.0) $maximum }}
+                        {{ $position := div (mul $bin 100.0) 104 }}
+                        <i class="journal-year-bar{{ if not $words }} is-empty{{ end }}" data-bin="{{ $bin }}" data-word-count="{{ $words }}" style="--journal-bar-position: {{ $position }}%; --journal-bar-height: {{ $height }}%;"></i>
+                    {{ end }}
+                </span>
+                <span class="journal-year-months" aria-hidden="true">
+                    {{ range $month := seq 12 }}
+                        {{ $monthStart := time.AsTime (printf "%s-%02d-01" $year $month) }}
+                        {{ $monthDays := ($monthStart.AddDate 0 1 -1).Day }}
+                        {{ $middle := add (sub $monthStart.YearDay 1) (div $monthDays 2.0) }}
+                        <span style="--journal-month-position: {{ div (mul $middle 100.0) $days }}%;">{{ $month }}</span>
+                    {{ end }}
+                </span>
+                <span class="journal-year-label">{{ $year }}</span>
+            </a>
+        {{ end }}
+    </div>
+</nav>

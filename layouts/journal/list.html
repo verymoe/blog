@@ -1,0 +1,53 @@
+{{/* A complete annual calendar; publication dates are the record coordinates. */}}
+{{ define "body-class" }}template-journal{{ end }}
+{{ define "right-sidebar" }}{{ end }}
+{{ define "main" }}
+    {{ $pages := .RegularPagesRecursive.ByDate.Reverse }}
+    {{ $years := slice (now.Format "2006") }}
+    {{ $records := dict }}
+    {{ if $pages }}
+        {{ $years = slice }}
+        {{ $groups := $pages.GroupByDate "2006" }}
+        {{ $newest := int (index $groups 0).Key }}
+        {{ $oldest := int (index $groups (sub (len $groups) 1)).Key }}
+        {{ range seq $newest -1 $oldest }}{{ $years = $years | append (printf "%d" .) }}{{ end }}
+        {{ range $pages.GroupByDate "2006-01-02" }}{{ $records = merge $records (dict .Key .Pages) }}{{ end }}
+    {{ end }}
+    <div class="journal-calendar" data-journal-calendar>
+        <header class="journal-heading">
+            <h1>{{ .Title }}</h1>
+            {{ with .Description }}<p class="journal-intro">{{ . }}</p>{{ end }}
+        </header>
+        {{ with first 5 $pages }}
+            <section class="journal-recent" aria-labelledby="journal-recent-heading">
+                <h2 id="journal-recent-heading">Recent entries</h2>
+                <ol>
+                    {{ range . }}
+                        <li>
+                            <a class="journal-recent-link" href="{{ .RelPermalink }}">
+                                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
+                                <span class="journal-recent-content"><span class="journal-recent-title">{{ .Title }}</span>{{ partial "journal/tags.html" . }}</span>
+                            </a>
+                        </li>
+                    {{ end }}
+                </ol>
+            </section>
+        {{ end }}
+        {{ partial "journal/years.html" (dict "Years" $years "Pages" $pages) }}
+        {{ range $years }}
+            {{ partial "journal/year.html" (dict "Year" . "Records" $records) }}
+        {{ end }}
+        {{ range $pages.GroupByDate "2006-01-02" }}
+            <section class="journal-day-records" id="journal-date-{{ .Key }}" data-journal-records="{{ .Key }}">
+                <h2>{{ (index .Pages 0).Date.Format "January 2, 2006" }}</h2>
+                {{ range .Pages }}{{ partial "journal/entry.html" . }}{{ end }}
+            </section>
+        {{ end }}
+        <div class="journal-hover" data-journal-hover popover="manual" role="region" aria-label="Entries on this date" hidden></div>
+        <dialog class="journal-dialog" data-journal-dialog aria-labelledby="journal-dialog-date">
+            <button class="journal-dialog-close" type="button" aria-label="Close entries" data-journal-close>×</button>
+            <div data-journal-dialog-content></div>
+        </dialog>
+    </div>
+    {{ partial "footer/footer" . }}
+{{ end }}

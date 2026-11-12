@@ -1,0 +1,5 @@
+<div class="journal-context">
+    <a href="{{ (site.GetPage "/journal").RelPermalink }}">Journal</a>
+    <span class="journal-word-count">{{ .WordCount }} 字</span>
+    {{ if .Draft }}<span class="journal-draft">Draft</span>{{ end }}
+</div>

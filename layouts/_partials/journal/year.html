@@ -1,0 +1,45 @@
+{{ $year := .Year }}
+{{ $records := .Records }}
+<section class="journal-year" id="journal-year-{{ $year }}" data-journal-year="{{ $year }}" aria-label="{{ $year }} calendar">
+    <h2 class="journal-year-fallback">{{ $year }}</h2>
+    <div class="journal-months">
+        {{ range seq 12 }}
+            {{ $month := . }}
+            {{ $first := time.AsTime (printf "%s-%02d-01" $year $month) }}
+            {{ $offset := mod (add (int $first.Weekday) 6) 7 }}
+            {{ $last := ($first.AddDate 0 1 -1).Day }}
+            <section class="journal-calendar-month" aria-labelledby="journal-month-{{ $year }}-{{ $month }}">
+                <h3 id="journal-month-{{ $year }}-{{ $month }}">{{ $first.Format "January" }}</h3>
+                <table aria-labelledby="journal-month-{{ $year }}-{{ $month }}">
+                    <thead><tr>{{ range slice "Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday" "Sunday" }}<th scope="col"><abbr title="{{ . }}">{{ substr . 0 1 }}</abbr></th>{{ end }}</tr></thead>
+                    <tbody>
+                        {{ range $row := seq 0 5 }}
+                            <tr>
+                                {{ range $col := seq 0 6 }}
+                                    {{ $day := add (sub (add (mul $row 7) $col) $offset) 1 }}
+                                    <td>
+                                        {{ if and (ge $day 1) (le $day $last) }}
+                                            {{ $date := printf "%s-%02d-%02d" $year $month $day }}
+                                            {{ with index $records $date }}
+                                                {{ $words := 0 }}{{ $titles := slice }}
+                                                {{ range . }}
+                                                    {{ $words = add $words .WordCount }}
+                                                    {{ $titles = $titles | append .Title }}
+                                                {{ end }}
+                                                {{ $level := 1 }}
+                                                {{ range slice 100 300 600 1200 }}{{ if ge $words . }}{{ $level = add $level 1 }}{{ end }}{{ end }}
+                                                <a class="journal-day has-record journal-density-{{ $level }}" href="#journal-date-{{ $date }}" data-journal-day="{{ $date }}" data-word-count="{{ $words }}" title="{{ delimit $titles " / " }} ({{ $words }} 字)" aria-label="{{ $first.Format "January" }} {{ $day }}, {{ $year }}: {{ delimit $titles "; " }}, {{ $words }} 字"><time datetime="{{ $date }}">{{ $day }}</time></a>
+                                            {{ else }}
+                                                <span class="journal-day">{{ $day }}</span>
+                                            {{ end }}
+                                        {{ end }}
+                                    </td>
+                                {{ end }}
+                            </tr>
+                        {{ end }}
+                    </tbody>
+                </table>
+            </section>
+        {{ end }}
+    </div>
+</section>

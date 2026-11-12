@@ -1,0 +1,11 @@
+<article class="journal-entry" data-journal-entry data-word-count="{{ .WordCount }}">
+    <a href="{{ .RelPermalink }}" class="journal-entry-link">
+        <div class="journal-entry-content">
+            <div class="journal-entry-meta"><span class="journal-word-count">{{ .WordCount }} 字</span>{{ if .Draft }}<span class="journal-draft">Draft</span>{{ end }}</div>
+            <h3>{{ .Title }}</h3>
+            {{ partial "journal/tags.html" . }}
+            {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+        </div>
+        {{ partial "helper/icon" "chevron-right" }}
+    </a>
+</article>

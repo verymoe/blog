@@ -1,0 +1,142 @@
+/* A diary calendar: one hue, with writing length encoded as tonal depth. */
+:root {
+    --journal-ink: #416f78;
+    --journal-edge: #accfd4;
+    --journal-level-1: #edf4f5;
+    --journal-level-2: #dfedf0;
+    --journal-level-3: #c4dfe4;
+    --journal-level-4: #a4ccd4;
+    --journal-level-5: #91bcc5;
+}
+:root[data-scheme="dark"] {
+    --journal-ink: #a5d7d8;
+    --journal-edge: #547f88;
+    --journal-level-1: #202d37;
+    --journal-level-2: #253945;
+    --journal-level-3: #2a4654;
+    --journal-level-4: #305463;
+    --journal-level-5: #365e70;
+}
+.template-journal {
+    [hidden] { display: none !important; }
+    .main { gap: 24px; min-width: 0; }
+}
+.journal-calendar {
+    @include card-style;
+    padding: 32px 36px 24px;
+    background: var(--shiro-surface-background);
+    outline: 1px solid var(--shiro-surface-edge);
+    outline-offset: -1px;
+}
+.journal-heading { padding-bottom: 22px; }
+.journal-heading h1 { margin: 0; color: var(--card-text-color-main); font-size: 3.2rem; line-height: 1.2; letter-spacing: -0.03em; }
+.journal-intro { max-width: 46em; margin: 14px 0 0; color: var(--card-text-color-secondary); font-size: 1.4rem; line-height: 1.9; }
+.journal-recent { margin-bottom: 26px; }
+.journal-recent h2 { margin: 0 0 8px; font-size: 1.4rem; font-weight: 600; color: var(--card-text-color-secondary); }
+.journal-recent ol { margin: 0; padding: 0; list-style: none; }
+.journal-recent li + li { border-top: 1px solid var(--card-separator-color); }
+.journal-recent-link { display: grid; grid-template-columns: 88px minmax(0, 1fr); align-items: baseline; gap: 14px; padding: 10px 0; }
+.journal-recent-content { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; min-width: 0; }
+.journal-recent-link time { color: var(--card-text-color-secondary); font-size: 1.2rem; font-variant-numeric: tabular-nums; }
+.journal-recent-title { color: var(--card-text-color-main); font-size: 1.4rem; line-height: 1.6; overflow-wrap: anywhere; }
+.journal-recent-link:hover .journal-recent-title { text-decoration: underline; text-underline-offset: 4px; }
+.journal-years { max-width: 100%; overflow-x: auto; margin-bottom: 30px; border-bottom: 1px solid var(--card-separator-color); font-variant-numeric: tabular-nums; }
+.journal-year-strip { display: flex; }
+.journal-year-link { display: flex; flex: 1 0 280px; flex-direction: column; gap: 5px; padding: 8px 0 10px; color: var(--card-text-color-secondary); }
+.journal-year-bars { display: block; position: relative; height: 34px; border-bottom: 1px solid var(--card-separator-color); }
+.journal-year-bar { display: block; position: absolute; bottom: 0; left: var(--journal-bar-position); width: 2px; height: var(--journal-bar-height); min-height: 4px; background: var(--journal-edge); }
+.journal-year-bar.is-empty { height: 1px; min-height: 1px; background: var(--card-separator-color); }
+.journal-year-months { position: relative; display: block; height: 15px; color: var(--card-text-color-secondary); font-size: 1rem; line-height: 1.5; }
+.journal-year-months > span { position: absolute; left: var(--journal-month-position); transform: translateX(-50%); }
+.journal-year-label { align-self: center; padding: 1px 3px 4px; border-bottom: 2px solid transparent; font-size: 1.4rem; line-height: 1.5; }
+.journal-year-link:hover .journal-year-label { color: var(--journal-ink); }
+.journal-year-link[aria-current] .journal-year-label { color: var(--card-text-color-main); border-bottom-color: var(--journal-ink); font-weight: 700; }
+.journal-year-link[aria-current] .journal-year-bar:not(.is-empty) { background: var(--journal-ink); }
+.journal-year-fallback { font-size: 2.2rem; color: var(--card-text-color-main); }
+.is-ready .journal-year-fallback { display: none; }
+.journal-months { display: grid; grid-template-columns: repeat(auto-fit, minmax(217px, 1fr)); gap: 28px 32px; }
+.journal-calendar-month { min-width: 0; }
+.journal-calendar-month h3 { margin: 0 0 15px 7px; color: var(--card-text-color-main); font-size: 1.7rem; font-weight: 700; }
+.journal-calendar-month table { width: 100%; table-layout: fixed; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.journal-calendar-month th { padding: 0 0 8px; font-size: 1rem; font-weight: 400; text-align: center; color: var(--card-text-color-secondary); }
+.journal-calendar-month abbr { text-decoration: none; cursor: default; }
+.journal-calendar-month td { height: 35px; padding: 0; text-align: center; font-size: 1.25rem; color: var(--card-text-color-secondary); }
+.journal-day { display: inline-flex; width: 31px; height: 31px; align-items: center; justify-content: center; border-radius: 50%; line-height: 1; position: relative; }
+.journal-day.has-record { font-weight: 700; background: var(--journal-density-fill); color: var(--card-text-color-main); box-shadow: inset 0 0 0 1px var(--journal-edge); }
+@for $level from 1 through 5 { .journal-density-#{$level} { --journal-density-fill: var(--journal-level-#{$level}); } }
+.journal-day.has-record:hover { outline: 2px solid var(--journal-ink); outline-offset: 2px; }
+.journal-day-records { margin-top: 32px; scroll-margin-top: 24px; border-top: 1px solid var(--card-separator-color); }
+.journal-day-records h2, .journal-dialog h2 { margin: 0; padding: 26px 0 6px; color: var(--card-text-color-main); font-size: 2rem; line-height: 1.4; }
+.journal-dialog {
+    width: calc(100% - 32px);
+    max-width: 480px;
+    max-height: calc(100dvh - 48px);
+    box-sizing: border-box;
+    padding: 28px;
+    border: 1px solid var(--shiro-surface-edge);
+    border-radius: var(--card-border-radius);
+    background: var(--card-background);
+    color: var(--card-text-color-main);
+    box-shadow: var(--shadow-l2);
+}
+.journal-hover {
+    position: fixed;
+    inset: auto;
+    z-index: 10000;
+    width: 340px;
+    max-width: calc(100vw - 24px);
+    max-height: calc(100dvh - 24px);
+    box-sizing: border-box;
+    overflow: auto;
+    margin: 0;
+    padding: 19px 20px 5px;
+    border: 1px solid var(--journal-edge);
+    border-radius: 10px;
+    background: var(--card-background);
+    color: var(--card-text-color-main);
+    box-shadow: var(--shadow-l2);
+}
+.journal-hover h2 { margin: 0 0 4px; font-size: 1.6rem; line-height: 1.5; }
+.journal-hover .journal-entry-link { padding: 14px 0; gap: 10px; }
+.journal-hover .journal-entry-content h3 { font-size: 1.5rem; }
+.journal-hover .journal-entry-content p { font-size: 1.25rem; line-height: 1.7; }
+.journal-dialog::backdrop { background: rgba(10, 18, 30, 0.35); }
+.journal-dialog h2 { padding: 0 24px 16px 0; }
+.journal-dialog-close { position: absolute; right: 12px; top: 10px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: transparent; color: var(--card-text-color-secondary); font-size: 2.6rem; cursor: pointer; }
+.journal-dialog-close:hover { background: var(--card-separator-color); }
+.journal-entry + .journal-entry { border-top: 1px solid var(--card-separator-color); }
+.journal-entry-link { display: grid; grid-template-columns: minmax(0, 1fr) 16px; gap: 16px; align-items: center; padding: 20px 0; }
+.journal-entry-meta { display: flex; gap: 12px; align-items: center; margin-bottom: 7px; }
+.journal-tags { display: inline-flex; flex-wrap: wrap; gap: 4px 10px; color: var(--journal-ink); font-size: 1.15rem; line-height: 1.7; }
+.journal-entry-content > .journal-tags { margin-top: 6px; }
+.journal-word-count { color: var(--card-text-color-secondary); font-size: 1.2rem; font-variant-numeric: tabular-nums; }
+.journal-draft { font-size: 1.1rem; color: var(--card-text-color-secondary); border-bottom: 1px dotted currentColor; }
+.journal-entry-content h3 { margin: 0; color: var(--card-text-color-main); font-size: 1.8rem; line-height: 1.55; font-weight: 600; overflow-wrap: anywhere; }
+.journal-entry-content p { margin: 8px 0 0; color: var(--card-text-color-secondary); font-size: 1.4rem; line-height: 1.75; }
+.journal-entry-link > svg { width: 16px; height: 16px; color: var(--card-text-color-secondary); }
+.journal-entry-link:hover h3 { text-decoration: underline; text-underline-offset: 4px; }
+.journal-context { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 16px; margin: 18px var(--card-padding) 28px; padding-top: 16px; border-top: 1px solid var(--card-separator-color); color: var(--card-text-color-secondary); font-size: 1.3rem; }
+.journal-context > a { color: var(--card-text-color-main); text-decoration: underline; text-underline-offset: 4px; }
+.journal-navigation { display: flex; gap: 16px; }
+.journal-navigation > a { flex: 1; min-width: 0; padding: 22px; border-radius: var(--card-border-radius); background: var(--shiro-surface-background); outline: 1px solid var(--shiro-surface-edge); outline-offset: -1px; }
+.journal-navigation span { display: block; margin-bottom: 8px; font-size: 1.2rem; color: var(--card-text-color-secondary); }
+.journal-navigation strong { font-size: 1.5rem; line-height: 1.7; font-weight: 600; color: var(--card-text-color-main); }
+.template-journal a:focus-visible, .journal-dialog button:focus-visible, .journal-context a:focus-visible, .journal-navigation a:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 3px; }
+@media (max-width: 599px) {
+    .journal-calendar { padding: 24px 22px 22px; }
+    .journal-heading h1 { font-size: 2.8rem; }
+    .journal-recent-link { grid-template-columns: 76px minmax(0, 1fr); gap: 9px; }
+    .journal-recent-link time { font-size: 1.1rem; }
+    .journal-months { grid-template-columns: 1fr; gap: 26px; }
+    .journal-calendar-month h3 { margin-bottom: 12px; }
+    .journal-calendar-month td { height: 39px; font-size: 1.35rem; }
+    .journal-day { width: 34px; height: 34px; }
+    .journal-dialog { padding: 24px; }
+    .journal-navigation { flex-direction: column; }
+}
+@media print {
+    .journal-dialog, .journal-hover, .journal-navigation, .journal-years { display: none !important; }
+    .journal-calendar { background: white; box-shadow: none; }
+    .is-ready .journal-year-fallback { display: block; }
+    .journal-calendar-month { break-inside: avoid; }
+}

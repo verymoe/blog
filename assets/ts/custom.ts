@@ -1,3 +1,5 @@
+import "./journal";
+
 // Stack v4.0.3 custom entry. Native port of Moedog's waifu controls; no jQuery.
 interface Live2DVariant { name: string; path: string }
 interface Live2DModel { id: string; name: string; variants: Live2DVariant[] }

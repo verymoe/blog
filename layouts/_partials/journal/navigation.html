@@ -1,0 +1,14 @@
+{{ $current := . }}{{ $pages := (site.GetPage "/journal").RegularPagesRecursive.ByDate.Reverse }}
+{{ $older := false }}{{ $newer := false }}
+{{ range $i, $page := $pages }}
+    {{ if eq $page.RelPermalink $current.RelPermalink }}
+        {{ if gt $i 0 }}{{ $newer = index $pages (sub $i 1) }}{{ end }}
+        {{ if lt (add $i 1) (len $pages) }}{{ $older = index $pages (add $i 1) }}{{ end }}
+    {{ end }}
+{{ end }}
+{{ if or $older $newer }}
+<nav class="journal-navigation" aria-label="Journal entries">
+    {{ with $older }}<a href="{{ .RelPermalink }}" rel="prev"><span>Older</span><strong>{{ .Title }}</strong></a>{{ end }}
+    {{ with $newer }}<a href="{{ .RelPermalink }}" rel="next"><span>Newer</span><strong>{{ .Title }}</strong></a>{{ end }}
+</nav>
+{{ end }}

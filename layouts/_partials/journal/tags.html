@@ -1,0 +1,3 @@
+{{- with .Params.tags -}}
+    <span class="journal-tags">{{ range . }}<span>#{{ . }}</span>{{ end }}</span>
+{{- end -}}
