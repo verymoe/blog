@@ -1,0 +1,49 @@
+/* Stack's recommendation cards, with quiet controls beside the heading. */
+.related-content {
+    .related-content-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 10px;
+    }
+    .section-title { margin: 0; }
+    .related-content-controls { display: flex; gap: 8px; flex-shrink: 0; }
+    .related-content-controls[hidden] { display: none; }
+    .related-content-controls button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        border: 1px solid var(--shiro-surface-edge);
+        border-radius: 50%;
+        background: var(--shiro-surface-background);
+        color: var(--card-text-color-main);
+        cursor: pointer;
+    }
+    .related-content-controls button:hover:not(:disabled) { background: var(--card-background); }
+    .related-content-controls button:disabled { opacity: 0.35; cursor: default; }
+    .related-content-controls svg { width: 18px; height: 18px; }
+    [data-related-previous] svg { transform: rotate(180deg); }
+    .subsection-list {
+        scrollbar-width: thin;
+        scrollbar-color: var(--card-text-color-tertiary) transparent;
+        scroll-padding-inline: var(--overlap-x);
+        scroll-snap-type: x proximity;
+    }
+    .subsection-list::-webkit-scrollbar { height: 4px; }
+    .subsection-list::-webkit-scrollbar-track { background: transparent; }
+    .subsection-list::-webkit-scrollbar-thumb { border-radius: 4px; background: var(--card-text-color-tertiary); }
+    &.is-enhanced .subsection-list { scrollbar-width: none; }
+    &.is-enhanced .subsection-list::-webkit-scrollbar { display: none; }
+    .article-list--tile article { scroll-snap-align: start; }
+    button:focus-visible, .subsection-list:focus-visible, .article-list--tile a:focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 3px;
+    }
+}
+@media print {
+    .related-content .related-content-controls { display: none; }
+}

@@ -5,9 +5,15 @@
     {{ $articles := where .Site.RegularPages "Type" "ne" "journal" }}
     {{ $related := ($articles.Related .) | first 5 }}
     {{ with $related }}
-    <aside>
-        <h2 class="section-title">{{ T "article.relatedContent" }}</h2>
-        <div class="subsection-list">
+    <aside class="related-content" data-related-content>
+        <div class="related-content-heading">
+            <h2 class="section-title" id="related-content-heading">{{ T "article.relatedContent" }}</h2>
+            <div class="related-content-controls" role="group" aria-label="Browse related content" hidden>
+                <button type="button" data-related-previous aria-label="Previous articles" aria-controls="related-content-list" disabled>{{ partial "helper/icon" "chevron-right" }}</button>
+                <button type="button" data-related-next aria-label="Next articles" aria-controls="related-content-list">{{ partial "helper/icon" "chevron-right" }}</button>
+            </div>
+        </div>
+        <div class="subsection-list" id="related-content-list" data-related-scroll tabindex="0" role="region" aria-labelledby="related-content-heading">
             <div class="article-list--tile">
                 {{ range . }}{{ partial "article-list/tile" . }}{{ end }}
             </div>
