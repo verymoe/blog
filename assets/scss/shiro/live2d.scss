@@ -1,0 +1,161 @@
+// Moedog's waifu: a warm translucent bubble and seven bare, stacked FA4 icons.
+.shiro-live2d {
+    --live2d-width: 220px;
+    --live2d-height: 250px;
+    --live2d-left: 8px;
+    --live2d-top: calc(100vh - 320px);
+    position: fixed;
+    left: var(--live2d-left);
+    top: var(--live2d-top);
+    width: calc(var(--live2d-width) + 10px);
+    height: calc(var(--live2d-height) + 20px);
+    z-index: 30;
+    font-family: var(--base-font-family);
+    font-size: 12px;
+    line-height: 20px;
+    color: #555;
+    pointer-events: none;
+    user-select: none;
+
+    [hidden] { display: none !important; }
+    &, * { box-sizing: border-box; }
+    button, select, a { font: inherit; }
+    button, a { cursor: pointer; }
+    button:disabled { cursor: default; opacity: .35; }
+    button:focus-visible, select:focus-visible, a:focus-visible {
+        outline: 2px solid #5495d9;
+        outline-offset: 3px;
+    }
+    &__widget { position: relative; height: 100%; }
+    &__stage, &__interact {
+        position: absolute;
+        left: 3%;
+        bottom: 0;
+        width: var(--live2d-width);
+        height: var(--live2d-height);
+    }
+    &__stage {
+        iframe { display: block; width: 100%; height: 100%; border: 0; background: transparent; pointer-events: none; }
+        &[aria-busy="true"]::after {
+            content: "看板娘准备中…";
+            position: absolute;
+            inset: auto 0 16px;
+            text-align: center;
+            color: var(--card-text-color-secondary);
+        }
+    }
+    &__interact {
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        cursor: move;
+        cursor: grab;
+        pointer-events: auto;
+        touch-action: none;
+    }
+    &[data-dragging] &__interact { cursor: grabbing; }
+    &[data-roaming] { transition: left .5s ease, top .5s ease; }
+    &__message, &__picker {
+        border: 1px solid rgba(224, 186, 140, .8);
+        border-radius: 12px;
+        background: rgba(236, 217, 188, .8);
+        box-shadow: 0 3px 15px 2px rgba(191, 158, 118, .2);
+    }
+    &__message {
+        position: absolute;
+        top: -20px;
+        left: 5px;
+        width: 220px;
+        height: 70px;
+        margin: 0;
+        padding: 5px 7px;
+        font-size: 12px;
+        line-height: 20px;
+        overflow: hidden;
+        overflow-wrap: anywhere;
+        text-overflow: ellipsis;
+        pointer-events: none;
+    }
+    &__tools {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: auto;
+        button, a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            color: #5b6c7d;
+            text-decoration: none;
+            transition: color .2s;
+            &:hover:not(:disabled) { color: #34495e; }
+        }
+        svg { display: block; width: 16px; height: 16px; fill: currentColor; }
+        a:first-child svg, a:nth-child(6) svg { width: 20px; height: 20px; }
+        button[data-action="quote"] svg { width: 19px; height: 19px; }
+        button[data-action="outfit"] svg, button[data-action="close"] svg { width: 22px; height: 22px; }
+    }
+    &__widget:hover &__tools, &__widget:focus-within &__tools, &[data-failed] &__tools { opacity: 1; visibility: visible; }
+    &__picker { /* Additional roles share the original bubble's palette. */
+        position: absolute;
+        bottom: 0;
+        left: var(--live2d-picker-left, calc(100% + 10px));
+        width: 230px;
+        max-height: calc(100vh - 40px);
+        overflow: auto;
+        padding: 12px;
+        background: #ecdbbf;
+        pointer-events: auto;
+        label { display: block; margin: 10px 0 4px; }
+        select { width: 100%; padding: 6px; border: 1px solid #c7ac8b; border-radius: 4px; color: #555; background: #fcf7ef; }
+    }
+    &__picker-heading, &__picker-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button { border: 0; padding: 0 4px; color: #5b6c7d; background: transparent; }
+    }
+    &__picker-heading { strong { font-size: 13px; } button { font-size: 20px; } }
+    &__picker-actions { margin-top: 12px; button { padding: 3px 6px; border: 1px solid #c7ac8b; border-radius: 4px; } }
+    &__count { float: right; font-size: 11px; }
+    &__hint { margin: 10px 0 0; font-size: 12px; line-height: 20px; }
+    &__restore {
+        position: fixed;
+        right: 20px;
+        bottom: 130px;
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: rgba(132, 132, 132, .7);
+        color: white;
+        pointer-events: auto;
+        svg { width: 18px; height: 18px; fill: currentColor; }
+        &:hover { background: #848484; }
+    }
+    &[data-failed] &__restore::after { content: "重试"; position: absolute; top: 40px; color: var(--card-text-color-secondary); white-space: nowrap; }
+}
+
+html[data-scheme="dark"] .shiro-live2d__tools {
+    button, a { color: #a3b2c2; &:hover:not(:disabled) { color: #e0e7ef; } }
+}
+@media (prefers-reduced-motion: reduce) {
+    .shiro-live2d[data-roaming], .shiro-live2d__tools button, .shiro-live2d__tools a { transition: none; }
+}
+@media print { .shiro-live2d { display: none !important; } }

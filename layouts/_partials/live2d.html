@@ -1,0 +1,42 @@
+{{- /* Stack v4.0.3 footer extension. Control order and appearance follow moedog.org. */ -}}
+{{- with .Site.Params.live2d -}}
+{{- if .enabled -}}
+{{- $base := .assetBase | default "" -}}
+{{- if not (hasPrefix $base "https://") -}}
+    {{- errorf "Live2D requires an absolute HTTPS CDN URL in params.live2d.assetBase" -}}
+{{- end -}}
+{{- $base = printf "%s/" (strings.TrimSuffix "/" $base) -}}
+<div id="shiro-live2d" class="shiro-live2d" hidden
+    data-asset-base="{{ $base }}"
+    data-default-model="{{ .defaultModel | default "bilibili-33" }}"
+    data-min-width="{{ .minWidth | default 1280 }}"
+    data-page-title="{{ $.Title }}"
+    data-home="{{ $.Site.Home.RelPermalink }}"
+    data-hitokoto="{{ .hitokotoEndpoint | default "https://v1.hitokoto.cn/?encode=text" }}">
+    <section class="shiro-live2d__widget" aria-label="Live2D 看板娘" hidden>
+        <p class="shiro-live2d__message" role="status" aria-live="polite" hidden></p>
+        <div class="shiro-live2d__stage" aria-label="看板娘模型"></div>
+        <button class="shiro-live2d__interact" type="button" aria-label="与看板娘互动或拖动位置" title="拖动人物移动；方向键微调，Home 键回到左栏"></button>
+        <div class="shiro-live2d__tools" role="group" aria-label="看板娘工具">
+            <a href="{{ $.Site.Home.RelPermalink }}" data-tip="点它就可以回到首页啦！" aria-label="回到首页" title="回到首页">{{ partial "live2d-icon.html" "home" }}</a>
+            <button type="button" data-action="quote" data-tip="猜猜我要说些什么？" aria-label="一言" title="一言">{{ partial "live2d-icon.html" "comments" }}</button>
+            <button type="button" data-action="models" data-tip="要见见我的朋友们吗？" aria-label="选择角色" title="选择角色" aria-expanded="false" aria-controls="live2d-picker">{{ partial "live2d-icon.html" "identity" }}</button>
+            <button type="button" data-action="outfit" data-tip="我的新衣服好看吗？" aria-label="换一套服装" title="换一套服装">{{ partial "live2d-icon.html" "street" }}</button>
+            <button type="button" data-action="capture" data-tip="你要给我拍照呀？一二三～茄子～" aria-label="拍照保存 PNG" title="拍照保存 PNG">{{ partial "live2d-icon.html" "camera" }}</button>
+            <a href="https://moedog.org/946.html" target="_blank" rel="noopener noreferrer" data-tip="想知道更多关于我的事吗？" aria-label="看板娘说明（新窗口）" title="看板娘说明">{{ partial "live2d-icon.html" "info" }}</a>
+            <button type="button" data-action="close" data-tip="到了要说再见的时候了吗？" aria-label="收起看板娘" title="收起看板娘">{{ partial "live2d-icon.html" "close" }}</button>
+        </div>
+        <div id="live2d-picker" class="shiro-live2d__picker" hidden>
+            <div class="shiro-live2d__picker-heading"><strong>看板娘</strong><button type="button" data-action="dismiss" aria-label="关闭角色选择">×</button></div>
+            <label for="live2d-model">角色 <span class="shiro-live2d__count"></span></label>
+            <select id="live2d-model"></select>
+            <label for="live2d-outfit">服装</label>
+            <select id="live2d-outfit"></select>
+            <div class="shiro-live2d__picker-actions"><button type="button" data-action="random">随机角色</button><button type="button" data-action="reset">回到左栏</button></div>
+            <p class="shiro-live2d__hint">按住人物拖动，点击人物互动。也可以聚焦人物后用方向键移动，Home 键复位。</p>
+        </div>
+    </section>
+    <button class="shiro-live2d__restore" type="button" data-action="restore" aria-label="显示看板娘" title="显示看板娘" hidden>{{ partial "live2d-icon.html" "venus" }}</button>
+</div>
+{{- end -}}
+{{- end -}}

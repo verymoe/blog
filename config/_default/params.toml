@@ -48,6 +48,14 @@ SortBy              = "default"
     toggle  = true
     default = "dark"
 
+[live2d]
+    enabled = true
+    # Live2D runtime and models are hosted exclusively on the CDN.
+    assetBase = "https://assets.moedev.cn/blog/live2d/"
+    defaultModel = "bilibili-33"
+    minWidth = 1280
+    hitokotoEndpoint = "https://v1.hitokoto.cn/?encode=text"
+
 [cookies]
     enabled      = false
     showSettings = true
