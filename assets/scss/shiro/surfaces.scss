@@ -22,11 +22,14 @@
     --card-text-color-main: #f5f7fc;
     --card-text-color-secondary: #e0e5ee;
     --card-text-color-tertiary: #cbd3e1;
-    --card-border-radius: 24px;
+    --card-border-radius: 14px;
+    --shadow-l1: none;
+    --shadow-l2: none;
+    --shadow-l3: none;
     --shiro-wallpaper-opacity: 0.58;
     --shiro-wallpaper-filter: brightness(0.45) saturate(0.95);
-    --shiro-surface-background: rgba(17, 24, 36, 0.72);
-    --shiro-surface-edge: rgba(230, 241, 255, 0.18);
+    --shiro-surface-background: rgba(24, 28, 35, 0.6);
+    --shiro-surface-edge: transparent;
 }
 
 :root[data-scheme] {
@@ -83,6 +86,11 @@
     }
 }
 
+:root[data-scheme="dark"] .tagCloud-tags a {
+    background: rgba(210, 216, 227, 0.07);
+    border-radius: 5px;
+}
+
 @media (max-width: 767px) {
     :root[data-scheme="light"] {
         --shiro-wallpaper-opacity: 0.38;
@@ -91,11 +99,21 @@
     :root[data-scheme="dark"] {
         --shiro-wallpaper-opacity: 0.4;
     }
+
+    :root[data-scheme] #main-menu {
+        background: var(--shiro-surface-background);
+        border-radius: var(--card-border-radius);
+        margin: 0;
+    }
 }
 
 @media (prefers-reduced-transparency: reduce), (prefers-contrast: more), print {
     :root[data-scheme] {
         --shiro-surface-background: var(--card-background);
+    }
+
+    :root[data-scheme] .tagCloud-tags a {
+        background: var(--card-background);
     }
 }
 
