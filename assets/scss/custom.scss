@@ -6,8 +6,8 @@
 /* Links page: responsive grid layout + shuffle anti-FOUC */
 .links-grid {
     display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr;
+    gap: 14px;
+    grid-template-columns: minmax(0, 1fr);
     visibility: hidden;
 
     /* Remove container-level card styles */
@@ -17,11 +17,11 @@
     padding: 0;
 
     @include respond(md) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     @include respond(xl) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     &.shuffled {
@@ -30,7 +30,9 @@
 
     article {
         @include card-style;
+        min-width: 0;
         overflow: hidden;
+        transition: transform 220ms ease, box-shadow 220ms ease;
 
         /* Remove the list-style border separators */
         border-bottom: none !important;
@@ -38,15 +40,25 @@
         & > a {
             display: flex;
             align-items: center;
+            height: 100%;
+            box-sizing: border-box;
             padding: var(--small-card-padding);
             gap: var(--spacing-md);
+
+            &:focus-visible {
+                outline: 2px solid var(--accent-color);
+                outline-offset: -3px;
+                border-radius: var(--card-border-radius);
+            }
         }
 
         .article-details {
-            flex-grow: 1;
+            flex: 1;
+            min-width: 0;
             padding: 0;
             min-height: var(--article-compact-image-size);
             gap: var(--spacing-sm);
+            overflow-wrap: anywhere;
         }
 
         .article-title {
@@ -58,11 +70,46 @@
             }
         }
 
-        .article-image img {
+        .article-image {
+            flex: 0 0 var(--article-compact-image-size);
             width: var(--article-compact-image-size);
             height: var(--article-compact-image-size);
-            object-fit: cover;
+            overflow: hidden;
+            border-radius: 16px;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                object-fit: cover;
+                transition: transform 280ms ease;
+            }
         }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: var(--shadow-l2);
+
+                .article-image img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .links-grid article,
+    .links-grid article .article-image img,
+    .links-grid.links-lost {
+        transition: none;
+    }
+
+    .links-grid article:hover,
+    .links-grid article:hover .article-image img {
+        transform: none;
     }
 }
 
