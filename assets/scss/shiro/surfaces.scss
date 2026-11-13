@@ -71,12 +71,21 @@
 
     .search-form {
         border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+
+        &:focus-within {
+            box-shadow: var(--shadow-l2);
+
+            label {
+                color: var(--card-text-color-main);
+            }
+        }
+
         input {
             background-color: transparent;
             box-shadow: none;
             &:focus-visible {
-                outline: 2px solid var(--accent-color);
-                outline-offset: 3px;
+                outline: none;
             }
         }
     }
