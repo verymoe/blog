@@ -1,0 +1,73 @@
+{{/*
+    Homepage preview override, based on Stack v4.0.3 article-list/default.html.
+    Keep helper/image and responsive-image contracts when upgrading the theme.
+*/}}
+{{- $image := partial "helper/image" (dict "Image" .Params.image "Resources" .Resources "Context" .) -}}
+{{- $summary := .Params.description -}}
+{{- if not $summary -}}
+    {{- $summary = .Summary | replaceRE `</(p|h[1-6]|li|pre|blockquote)>` "$0 " | plainify | htmlUnescape -}}
+{{- end -}}
+<article class="home-article{{ if $image }} has-image{{ end }}">
+    <header class="home-article-header">
+        <h2 class="home-article-title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h2>
+        {{ with $summary }}
+            <p class="home-article-summary">{{ . | plainify | htmlUnescape | truncate 150 }}</p>
+        {{ end }}
+    </header>
+
+    {{ with $image }}
+        <a class="home-article-cover" href="{{ $.RelPermalink }}">
+            {{ partial "helper/responsive-image" (dict
+                "Resource" .Resource
+                "Widths" (cond $.Site.Params.ImageProcessing.Content.Enabled $.Site.Params.ImageProcessing.Content.Widths nil)
+                "Attributes" (dict
+                    "src" .Permalink
+                    "width" .Width
+                    "height" .Height
+                    "alt" $.Title
+                    "loading" "lazy"
+                    "decoding" "async"
+                    "sizes" "(max-width: 767px) calc(100vw - 66px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px"
+                )
+            ) }}
+        </a>
+    {{ end }}
+
+    <footer class="article-meta home-article-meta">
+        {{ if not .Date.IsZero }}
+            <span class="home-article-meta-item">
+                {{ partial "helper/icon" "date" }}
+                <time class="article-time--published" datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
+                    {{- .Date | time.Format .Site.Params.dateFormat.published -}}
+                </time>
+            </span>
+        {{ end }}
+        {{ if .Params.readingTime | default .Site.Params.article.readingTime }}
+            <span class="home-article-meta-item">
+                {{ partial "helper/icon" "clock" }}
+                <time class="article-time--reading">{{ T "article.readingTime" .ReadingTime }}</time>
+            </span>
+        {{ end }}
+        {{ range .GetTerms "categories" }}
+            {{ $color := partial "helper/color-from-str" .LinkTitle }}
+            {{ $background := default $color.BackgroundColor .Params.style.background }}
+            {{ $text := default $color.TextColor .Params.style.color }}
+            <a class="home-article-label" href="{{ .RelPermalink }}" style="background-color: {{ $background | safeCSS }}; color: {{ $text | safeCSS }};">{{ .LinkTitle }}</a>
+        {{ end }}
+        {{ if .IsTranslated }}
+            {{ range .Translations }}
+                <a href="{{ .RelPermalink }}" lang="{{ .Language.LanguageCode }}">{{ .Language.Label }}</a>
+            {{ end }}
+        {{ end }}
+        {{ if .Site.Params.Article.List.ShowTags }}
+            {{ range .GetTerms "tags" }}
+                {{ $color := partial "helper/color-from-str" .LinkTitle }}
+                {{ $background := default $color.BackgroundColor .Params.style.background }}
+                {{ $text := default $color.TextColor .Params.style.color }}
+                <a class="home-article-label" href="{{ .RelPermalink }}" style="background-color: {{ $background | safeCSS }}; color: {{ $text | safeCSS }};">{{ .LinkTitle }}</a>
+            {{ end }}
+        {{ end }}
+    </footer>
+</article>

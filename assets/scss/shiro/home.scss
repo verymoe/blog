@@ -1,0 +1,106 @@
+/* Text-led homepage previews; shared surfaces still supply the background. */
+:root[data-scheme] .article-list > .home-article {
+    padding: 20px 18px;
+    gap: 14px;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: var(--shadow-l1);
+    transition: none;
+
+    @include respond(md) {
+        padding: 24px 28px;
+        gap: 16px;
+    }
+
+    a:focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 4px;
+        border-radius: 4px;
+    }
+
+    .home-article-header {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        min-width: 0;
+    }
+
+    .home-article-title {
+        margin: 0;
+        color: var(--card-text-color-main);
+        font-family: var(--article-font-family);
+        font-size: 1.9rem;
+        font-weight: 600;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+
+        @include respond(md) {
+            font-size: 2.2rem;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .home-article-summary {
+        margin: 0;
+        color: var(--card-text-color-secondary);
+        font-size: 1.5rem;
+        line-height: 1.8;
+        overflow-wrap: anywhere;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+    }
+
+    .home-article-cover {
+        display: block;
+        aspect-ratio: 2 / 1;
+        overflow: hidden;
+        border-radius: 6px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .home-article-meta-item {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+
+    .home-article-meta {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 16px;
+        font-size: 1.4rem;
+        line-height: 1.6;
+        color: var(--card-text-color-tertiary);
+
+        .home-article-label {
+            padding: 3px 10px;
+            border-radius: var(--tag-border-radius);
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}
