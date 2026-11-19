@@ -1,5 +1,5 @@
-# Change baseurl before deploy
-baseurl      = "https://verymoe.vercel.app"
+# Public canonical URL used by the sitemap, feeds, and page metadata.
+baseurl      = "https://shiro.love"
 languageCode = "en-us"
 title        = "Shiro"
 timeZone     = "Asia/Singapore"
