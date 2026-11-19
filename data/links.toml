@@ -36,12 +36,6 @@ website = "https://hoyue.net"
 image = "https://assets.moedev.cn/blog/photo/images/2025/f9b0c607f8ad2eaa676423071aa24ae2!webp"
 
 [[links]]
-title = "Loac"
-description = "我不是罗大锤"
-website = "https://loac.cc"
-image = "https://ldc-1251523367.cos.ap-beijing.myqcloud.com/nola/logo.png"
-
-[[links]]
 title = "茶栗栗"
 description = "是可爱的栗栗！"
 website = "https://chariri.moe/"
@@ -82,12 +76,6 @@ title = "Mikuの極光星"
 description = "心有多宽，世界就有多远"
 website = "https://blog.sotkg.com"
 image = "https://cn.cravatar.com/avatar/1012bf78fb01d5b964c3a9a0f515911a.png"
-
-[[links]]
-title = "SailTrack杂谈站"
-description = "让我们忠于理想，让我们面对现实"
-website = "https://www.sailtrack.cn"
-image = "https://www.sailtrack.cn/upload/logo-wigth.png"
 
 [[links]]
 title = "YuanRetro"
@@ -138,12 +126,6 @@ website = "https://blog.aks.moe/"
 image = "https://assets.moedev.cn/blog/photo/images/2026/5b55119bb2a14.jpg!webp"
 
 [[links]]
-title = "Shellblock"
-description = "永远相信美好的事情即将发生"
-website = "https://blog.saky.site/"
-image = "https://assets.moedev.cn/blog/photo/images/2025/f162dc1ca42db7be68626d20bfa3328d!webp"
-
-[[links]]
 title = "Recopec 的博客"
 description = "一只喵喵"
 website = "https://blog.irec.moe/"
@@ -167,11 +149,6 @@ description = "In the dawn, towards the sunrise."
 website = "https://www.sunnypai.top"
 image = "https://assets.moedev.cn/blog/photo/images/2025/%25E7%25BE%258E%25E6%25B3%25A2%25E9%2587%258C.webp"
 
-[[links]]
-title = "CobaltSalt"
-description = "放下个人素质 享受缺德人生"
-website = "https://www.yizhipikaqiu.top/"
-image = "https://www.yizhipikaqiu.top/More/statics/img/head.png"
 
 [[links]]
 title = "Thelia的随想"
@@ -181,57 +158,22 @@ image = "https://thelia.site/wp-content/uploads/2025/08/cropped-oc头像.jpg"
 
 # 失联友链
 [[lost_links]]
-title = "无何有之乡"
-description = "想要梦想与咸鱼兼得呢"
-website = "https://opau.cn/"
-image = "https://assets.moedev.cn/blog/photo/images/2025/UooH.jpg!webp"
-reason = "网站无法访问"
-
-[[lost_links]]
-title = "纯情"
-description = "专注于网络安全、docker脚本源码、学习强国积分、培训脚本、搭建techxuexi等"
-website = "https://blog.xiaohack.org/"
-image = "https://assets.moedev.cn/blog/photo/images/2025/9e17d1748a263f9ee5f3122a34dd00f8!webp"
-reason = "网站无法访问"
-
-[[lost_links]]
-title = "Injahow"
-description = "没什么有趣的东西，有趣的是来这的你！"
-website = "https://injahow.com/"
-image = "https://assets.moedev.cn/blog/photo/images/2025/bf84d1fb6b26e206cbf74a40adf17880!webp"
-reason = "友链未找到"
-
-[[lost_links]]
-title = "Zhuym"
-description = "Zhuym的博客"
-website = "https://blog.zer0code.cn/"
-image = "https://assets.moedev.cn/blog/photo/images/2025/nl5K.png!webp"
-reason = "友链未找到"
-
-[[lost_links]]
-title = "茈羽酱的小屋"
-description = "一个萌新站长的折腾日记"
-website = "https://moedk.com"
-image = "https://moedk.com/images/icon.png"
-reason = "网站无法访问"
-
-[[lost_links]]
 title = "Fankes"
 description = "方方"
 website = "https://blog.fankes.com/"
 image = "https://assets.moedev.cn/blog/photo/images/2025/e5f256422d6470acba526edf42906fef!webp"
-reason = "友链未找到"
+reason = "无人维护"
 
-[[links]]
+[[lost_links]]
 title = "果果小站"
 description = "人生如梦，一尊还酹江月。"
 website = "https://呐.cn/"
 image = "https://assets.moedev.cn/blog/photo/images/2025/tSeu.png!webp"
-reason = "SSL证书未更新"
+reason = "无人维护，无法解析"
 
-[[links]]
-title = "老鱼干"
-description = "专注于IT互联网"
-website = "https://www.tinyfish.top/"
-image = "https://weavatar.com//avatar/1292b9f928d868fefeb58d42790a55ee?s=80&d=404"
-reason = "网站无法访问"
+[[lost_links]]
+title = "CobaltSalt"
+description = "放下个人素质 享受缺德人生"
+website = "https://www.yizhipikaqiu.top/"
+image = "https://www.yizhipikaqiu.top/More/statics/img/head.png"
+reason = "被黑未修复"
