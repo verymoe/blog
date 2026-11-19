@@ -8,6 +8,10 @@ menu:
     weight: 50
     params:
       icon: notebook
+sitemap:
+  disable: true
 cascade:
   type: journal
+  sitemap:
+    disable: true
 ---

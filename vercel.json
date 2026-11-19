@@ -1,5 +1,11 @@
 {
   "buildCommand": "bash build.sh",
   "outputDirectory": "public",
-  "installCommand": "echo 'skip'"
+  "installCommand": "echo 'skip'",
+  "headers": [
+    {
+      "source": "/journal/index.xml",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
+    }
+  ]
 }
